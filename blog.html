@@ -1,291 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Dev Blog – Game & Art Progress</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <style>
-    :root {
-      --bg: #0f172a;
-      --card: #020617;
-      --accent: #38bdf8;
-      --accent-soft: rgba(56,189,248,0.15);
-      --text: #f9fafb;
-      --muted: #9ca3af;
-      --radius: 10px;
-    }
-    * {
-      box-sizing: border-box;
-    }
-    body {
-      margin: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-        sans-serif;
-      background: radial-gradient(circle at top, #1d283a 0, #020617 45%);
-      color: var(--text);
-    }
-    nav {
-      position: sticky;
-      top: 0;
-      z-index: 20;
-      background: rgba(15, 23, 42, 0.95);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid rgba(148, 163, 184, 0.2);
-    }
-    .nav-inner {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 14px 20px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    .nav-logo {
-      font-weight: 700;
-      font-size: 1.1rem;
-      letter-spacing: 0.05em;
-    }
-    .nav-links {
-      display: flex;
-      gap: 18px;
-    }
-    .nav-links a {
-      text-decoration: none;
-      font-size: 0.95rem;
-      padding: 8px 14px;
-      border-radius: 999px;
-      color: var(--muted);
-      transition: background 0.2s, color 0.2s;
-    }
-    .nav-links a:hover {
-      background: var(--accent-soft);
-      color: var(--accent);
-    }
-    .nav-links a.active {
-      background: var(--accent);
-      color: #0b1120;
-      font-weight: 600;
-    }
-    .page {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 30px 20px 60px;
-    }
-    h1 {
-      margin-bottom: 6px;
-    }
-    .lead {
-      color: var(--muted);
-      margin-bottom: 24px;
-      font-size: 0.95rem;
-    }
-    .post {
-      background: var(--card);
-      border-radius: var(--radius);
-      border: 1px solid rgba(148, 163, 184, 0.35);
-      padding: 16px 18px 18px;
-      margin-bottom: 18px;
-    }
-    .post-meta {
-      font-size: 0.75rem;
-      text-transform: uppercase;
-      letter-spacing: 0.07em;
-      color: var(--muted);
-      margin-bottom: 4px;
-    }
-    .post-title {
-      margin: 0 0 6px;
-      font-size: 1.05rem;
-    }
-    .post-summary {
-      font-size: 0.9rem;
-      color: var(--muted);
-      margin-bottom: 10px;
-    }
-    .tag-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      font-size: 0.75rem;
-      margin-bottom: 10px;
-    }
-    .tag {
-      padding: 3px 8px;
-      border-radius: 999px;
-      background: rgba(15, 23, 42, 0.9);
-      border: 1px solid rgba(148, 163, 184, 0.4);
-      color: var(--muted);
-    }
-    details {
-      margin-top: 8px;
-      border-top: 1px solid rgba(148, 163, 184, 0.25);
-      padding-top: 8px;
-    }
-    details summary {
-      font-size: 0.85rem;
-      cursor: pointer;
-      color: var(--accent);
-      list-style: none;
-    }
-    details[open] summary {
-      margin-bottom: 8px;
-    }
-    .post-body {
-      font-size: 0.9rem;
-      color: var(--muted);
-    }
-    .before-after {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 10px;
-      margin: 10px 0;
-    }
-    .ba-panel {
-      background: #020617;
-      border-radius: 8px;
-      padding: 8px;
-      text-align: center;
-      border: 1px solid rgba(148, 163, 184, 0.3);
-      font-size: 0.85rem;
-    }
-    .ba-panel img {
-      max-width: 100%;
-      border-radius: 4px;
-      margin-bottom: 6px;
-    }
-    footer {
-      border-top: 1px solid rgba(148, 163, 184, 0.3);
-      padding: 16px 20px 24px;
-      text-align: center;
-      font-size: 0.8rem;
-      color: var(--muted);
-    }
-    @media (max-width: 700px) {
-      .before-after {
-        grid-template-columns: minmax(0, 1fr);
-      }
-    }
-  </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dev Blog – Game & Art Progress</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
-<body>
-  <nav>
-    <div class="nav-inner">
-      <div class="nav-logo">YOUR NAME</div>
-      <div class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="portfolio.html">Portfolio</a>
-        <a href="blog.html" class="active">Blog</a>
-        <a href="contact.html">Contact</a>
-      </div>
-    </div>
-  </nav>
 
-  <main class="page">
+<body>
+
+    <!-- NAVIGATION (same as home, but Blog active) -->
     <header>
-      <h1>Development Blog</h1>
-      <p class="lead">
-        <!-- FILL -->
-        3 years of progress on my Skylanders-inspired game and art practice:
-        early concepts, failed experiments, and improved versions side by side.
-      </p>
+        <nav>
+            <div class="logo">Emma Rozanes</div>
+            <ul>
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="index.html#work" class="nav-link">Portfolio</a></li>
+                <li><a href="blog.html" class="nav-link active">Blog</a></li>
+                <li><a href="index.html#about" class="nav-link">About</a></li>
+                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <!-- BLOG POST TEMPLATE #1 -->
-    <article class="post">
-      <div class="post-meta">
-        <!-- FILL DATE -->
-        2025 · Art Growth
-      </div>
-      <h2 class="post-title">
-        <!-- FILL TITLE -->
-        Year 1 vs Year 3 – Creature Design Glow Up
-      </h2>
-      <p class="post-summary">
-        <!-- FILL -->
-        Comparing my first enemy design from 3 years ago with my current
-        version, plus what I changed in shape language, anatomy, and color.
-      </p>
-      <div class="tag-row">
-        <!-- FILL TAGS -->
-        <span class="tag">Creature Design</span>
-        <span class="tag">Before / After</span>
-        <span class="tag">Game Art</span>
-      </div>
-
-      <details>
-        <summary>Read full post</summary>
-        <div class="post-body">
-          <p>
-            <!-- FILL BODY -->
-            When I first designed this enemy, I focused mostly on cool details,
-            not on a clear silhouette. The result was messy and hard to read,
-            especially at small sizes in-game. Three years later, I redesigned
-            it with stronger shapes and a clearer elemental theme.
-          </p>
-
-          <!-- BEFORE / AFTER IMAGES -->
-          <div class="before-after">
-            <div class="ba-panel">
-              <strong>Before (Year 1)</strong><br />
-              <!-- FILL IMAGE PATH -->
-              <img src="images/before-creature.jpg" alt="Old creature design" />
-              <span>
-                Weak silhouette, noisy details, and unclear focal point.
-              </span>
-            </div>
-            <div class="ba-panel">
-              <strong>After (Year 3)</strong><br />
-              <!-- FILL IMAGE PATH -->
-              <img src="images/after-creature.jpg" alt="Improved creature design" />
-              <span>
-                Clearer silhouette, simplified shapes, and focused color
-                palette for the elemental theme.
-              </span>
-            </div>
-          </div>
-
-          <p>
-            <!-- FILL: reflection -->
-            I also changed the pose to better show the creature’s weight and
-            aggression. This redesign taught me to thumbnail silhouettes first
-            before adding details.
-          </p>
+    <!-- BLOG HERO / INTRO -->
+    <section class="blog-hero">
+        <div class="blog-hero-inner">
+            <h1>Development Blog</h1>
+            <p>
+                Three years of building my Skylanders-inspired game: early experiments, 
+                bad drawings, glow-ups, and behind-the-scenes progress.
+            </p>
         </div>
-      </details>
-    </article>
+    </section>
 
-    <!-- DUPLICATE THIS WHOLE ARTICLE FOR MORE POSTS -->
-    <article class="post">
-      <div class="post-meta">
-        2024 · 3D Pipeline
-      </div>
-      <h2 class="post-title">From First Sculpt to Game-Ready Character</h2>
-      <p class="post-summary">
-        My journey learning the full pipeline: sculpt, retopo, UVs, baking,
-        texturing, and importing into the engine.
-      </p>
-      <div class="tag-row">
-        <span class="tag">3D Modeling</span>
-        <span class="tag">Pipeline</span>
-        <span class="tag">Character Art</span>
-      </div>
+    <!-- BLOG POSTS -->
+    <section class="blog">
+        <div class="blog-posts">
 
-      <details>
-        <summary>Read full post</summary>
-        <div class="post-body">
-          <!-- FILL WITH YOUR STORY -->
-          <p>
-            At first, my sculpts were high-poly and stayed inside the 3D
-            software. Over time I learned how to retopologize, bake maps, and
-            get a clean result in-engine…
-          </p>
+            <!-- BLOG POST TEMPLATE – DUPLICATE FOR MORE POSTS -->
+            <article class="post-card">
+                <div class="post-meta">
+                    <!-- you can change the date + category -->
+                    <span class="post-date">2025</span>
+                    <span class="post-tag">Art Growth</span>
+                </div>
+                <h2 class="post-title">Year 1 vs Year 3 – Creature Design Glow Up</h2>
+                <p class="post-summary">
+                    Comparing my very first enemy concept with my current redesign. 
+                    I break down what changed in silhouette, anatomy, and color.
+                </p>
+
+                <div class="post-before-after">
+                    <div class="ba">
+                        <h3>Before</h3>
+                        <!-- replace with your own image -->
+                        <img src="images/before-creature.jpg" alt="Old creature design">
+                        <p>My early version – lots of details, but weak silhouette and muddy shapes.</p>
+                    </div>
+                    <div class="ba">
+                        <h3>After</h3>
+                        <!-- replace with your own image -->
+                        <img src="images/after-creature.jpg" alt="Improved creature design">
+                        <p>Redesigned with clearer shape language, stronger pose, and focused color palette.</p>
+                    </div>
+                </div>
+
+                <p class="post-body">
+                    <!-- write more detail here -->
+                    I learned to thumbnail silhouettes first, then layer in details. 
+                    This helped the creature read better at game-ready sizes on screen.
+                </p>
+            </article>
+
+            <!-- ANOTHER POST EXAMPLE -->
+            <article class="post-card">
+                <div class="post-meta">
+                    <span class="post-date">2024</span>
+                    <span class="post-tag">3D Pipeline</span>
+                </div>
+                <h2 class="post-title">From First Sculpt to Game-Ready Character</h2>
+                <p class="post-summary">
+                    A look at my process learning sculpting, retopology, UVs, baking, and importing into the engine.
+                </p>
+                <p class="post-body">
+                    <!-- fill with your own text -->
+                    My first characters never left the sculpting phase. Over time, I forced myself to finish the full pipeline:
+                    clean topology, proper UVs, normal/AO maps, and finally seeing them running around in-game.
+                </p>
+            </article>
+
         </div>
-      </details>
-    </article>
-  </main>
+    </section>
 
-  <footer>
-    © YOUR NAME – Dev Blog
-  </footer>
+    <footer>
+        © 2025 Your Name — All Rights Reserved
+    </footer>
+
 </body>
 </html>
