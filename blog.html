@@ -1,65 +1,291 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Dev Blog</title>
-<style>
+  <meta charset="UTF-8" />
+  <title>Dev Blog – Game & Art Progress</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card: #020617;
+      --accent: #38bdf8;
+      --accent-soft: rgba(56,189,248,0.15);
+      --text: #f9fafb;
+      --muted: #9ca3af;
+      --radius: 10px;
+    }
+    * {
+      box-sizing: border-box;
+    }
     body {
-        margin: 0;
-        font-family: Arial, Helvetica, sans-serif;
-        background: #f4f4f4;
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+      background: radial-gradient(circle at top, #1d283a 0, #020617 45%);
+      color: var(--text);
     }
     nav {
-        background: #222;
-        padding: 15px;
-        position: sticky;
-        top: 0;
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(15, 23, 42, 0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(148, 163, 184, 0.2);
     }
-    nav a {
-        color: white;
-        text-decoration: none;
-        margin-right: 20px;
-        font-size: 18px;
+    .nav-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
     }
-    nav a:hover {
-        color: #00aaff;
+    .nav-logo {
+      font-weight: 700;
+      font-size: 1.1rem;
+      letter-spacing: 0.05em;
     }
-    .container {
-        padding: 30px;
-        max-width: 900px;
-        margin: auto;
+    .nav-links {
+      display: flex;
+      gap: 18px;
+    }
+    .nav-links a {
+      text-decoration: none;
+      font-size: 0.95rem;
+      padding: 8px 14px;
+      border-radius: 999px;
+      color: var(--muted);
+      transition: background 0.2s, color 0.2s;
+    }
+    .nav-links a:hover {
+      background: var(--accent-soft);
+      color: var(--accent);
+    }
+    .nav-links a.active {
+      background: var(--accent);
+      color: #0b1120;
+      font-weight: 600;
+    }
+    .page {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 30px 20px 60px;
+    }
+    h1 {
+      margin-bottom: 6px;
+    }
+    .lead {
+      color: var(--muted);
+      margin-bottom: 24px;
+      font-size: 0.95rem;
     }
     .post {
-        background: white;
-        padding: 20px;
-        margin: 20px 0;
-        border-radius: 8px;
+      background: var(--card);
+      border-radius: var(--radius);
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      padding: 16px 18px 18px;
+      margin-bottom: 18px;
     }
-</style>
+    .post-meta {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: var(--muted);
+      margin-bottom: 4px;
+    }
+    .post-title {
+      margin: 0 0 6px;
+      font-size: 1.05rem;
+    }
+    .post-summary {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-bottom: 10px;
+    }
+    .tag-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      font-size: 0.75rem;
+      margin-bottom: 10px;
+    }
+    .tag {
+      padding: 3px 8px;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      color: var(--muted);
+    }
+    details {
+      margin-top: 8px;
+      border-top: 1px solid rgba(148, 163, 184, 0.25);
+      padding-top: 8px;
+    }
+    details summary {
+      font-size: 0.85rem;
+      cursor: pointer;
+      color: var(--accent);
+      list-style: none;
+    }
+    details[open] summary {
+      margin-bottom: 8px;
+    }
+    .post-body {
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+    .before-after {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+      margin: 10px 0;
+    }
+    .ba-panel {
+      background: #020617;
+      border-radius: 8px;
+      padding: 8px;
+      text-align: center;
+      border: 1px solid rgba(148, 163, 184, 0.3);
+      font-size: 0.85rem;
+    }
+    .ba-panel img {
+      max-width: 100%;
+      border-radius: 4px;
+      margin-bottom: 6px;
+    }
+    footer {
+      border-top: 1px solid rgba(148, 163, 184, 0.3);
+      padding: 16px 20px 24px;
+      text-align: center;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+    @media (max-width: 700px) {
+      .before-after {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+  </style>
 </head>
 <body>
-
-<nav>
-    <a href="index.html">Home</a>
-    <a href="portfolio.html">Portfolio</a>
-    <a href="blog.html">Blog</a>
-    <a href="contact.html">Contact</a>
-</nav>
-
-<div class="container">
-    <h1>Development Blog</h1>
-
-    <div class="post">
-        <h2>My First Character Sculpt (Year 1)</h2>
-        <p>Here I talk about my earliest work, with before & after comparisons...</p>
+  <nav>
+    <div class="nav-inner">
+      <div class="nav-logo">YOUR NAME</div>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="blog.html" class="active">Blog</a>
+        <a href="contact.html">Contact</a>
+      </div>
     </div>
+  </nav>
 
-    <div class="post">
-        <h2>Improving Texture Skills (Year 3)</h2>
-        <p>Here’s how I updated my original textures to my current level...</p>
-    </div>
+  <main class="page">
+    <header>
+      <h1>Development Blog</h1>
+      <p class="lead">
+        <!-- FILL -->
+        3 years of progress on my Skylanders-inspired game and art practice:
+        early concepts, failed experiments, and improved versions side by side.
+      </p>
+    </header>
 
-</div>
+    <!-- BLOG POST TEMPLATE #1 -->
+    <article class="post">
+      <div class="post-meta">
+        <!-- FILL DATE -->
+        2025 · Art Growth
+      </div>
+      <h2 class="post-title">
+        <!-- FILL TITLE -->
+        Year 1 vs Year 3 – Creature Design Glow Up
+      </h2>
+      <p class="post-summary">
+        <!-- FILL -->
+        Comparing my first enemy design from 3 years ago with my current
+        version, plus what I changed in shape language, anatomy, and color.
+      </p>
+      <div class="tag-row">
+        <!-- FILL TAGS -->
+        <span class="tag">Creature Design</span>
+        <span class="tag">Before / After</span>
+        <span class="tag">Game Art</span>
+      </div>
 
+      <details>
+        <summary>Read full post</summary>
+        <div class="post-body">
+          <p>
+            <!-- FILL BODY -->
+            When I first designed this enemy, I focused mostly on cool details,
+            not on a clear silhouette. The result was messy and hard to read,
+            especially at small sizes in-game. Three years later, I redesigned
+            it with stronger shapes and a clearer elemental theme.
+          </p>
+
+          <!-- BEFORE / AFTER IMAGES -->
+          <div class="before-after">
+            <div class="ba-panel">
+              <strong>Before (Year 1)</strong><br />
+              <!-- FILL IMAGE PATH -->
+              <img src="images/before-creature.jpg" alt="Old creature design" />
+              <span>
+                Weak silhouette, noisy details, and unclear focal point.
+              </span>
+            </div>
+            <div class="ba-panel">
+              <strong>After (Year 3)</strong><br />
+              <!-- FILL IMAGE PATH -->
+              <img src="images/after-creature.jpg" alt="Improved creature design" />
+              <span>
+                Clearer silhouette, simplified shapes, and focused color
+                palette for the elemental theme.
+              </span>
+            </div>
+          </div>
+
+          <p>
+            <!-- FILL: reflection -->
+            I also changed the pose to better show the creature’s weight and
+            aggression. This redesign taught me to thumbnail silhouettes first
+            before adding details.
+          </p>
+        </div>
+      </details>
+    </article>
+
+    <!-- DUPLICATE THIS WHOLE ARTICLE FOR MORE POSTS -->
+    <article class="post">
+      <div class="post-meta">
+        2024 · 3D Pipeline
+      </div>
+      <h2 class="post-title">From First Sculpt to Game-Ready Character</h2>
+      <p class="post-summary">
+        My journey learning the full pipeline: sculpt, retopo, UVs, baking,
+        texturing, and importing into the engine.
+      </p>
+      <div class="tag-row">
+        <span class="tag">3D Modeling</span>
+        <span class="tag">Pipeline</span>
+        <span class="tag">Character Art</span>
+      </div>
+
+      <details>
+        <summary>Read full post</summary>
+        <div class="post-body">
+          <!-- FILL WITH YOUR STORY -->
+          <p>
+            At first, my sculpts were high-poly and stayed inside the 3D
+            software. Over time I learned how to retopologize, bake maps, and
+            get a clean result in-engine…
+          </p>
+        </div>
+      </details>
+    </article>
+  </main>
+
+  <footer>
+    © YOUR NAME – Dev Blog
+  </footer>
 </body>
 </html>
