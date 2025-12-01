@@ -81,7 +81,7 @@ nav a.active {
     display: flex;
     align-items: center;
     background: url('images/yourbanner.jpg') center/cover no-repeat;
-    color: #fff;
+    color: #ffa245;
     padding: 10%;
 }
 
