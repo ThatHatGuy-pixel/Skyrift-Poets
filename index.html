@@ -11,7 +11,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 
-<!-- HOME BACKGROUND: change via CSS variables --home-bg-color / --home-hero-bg-image in style.css -->
 <body data-page="home">
 
     <!-- NAVIGATION -->
@@ -19,7 +18,7 @@
         <nav>
             <div class="logo">Harris Ross</div>
 
-            <!-- SEARCH BAR IN NAV (opens global search overlay) -->
+            <!-- SEARCH BAR IN NAV -->
             <div class="nav-search">
                 <input
                     type="text"
@@ -40,6 +39,7 @@
     </header>
 
     <!-- HERO SECTION -->
+    <!-- HOME BACKGROUND: change via CSS (hero + body background) -->
     <section class="hero">
         <div class="hero-inner">
 
@@ -58,6 +58,56 @@
                 <h1>Artist • Animator • Game Developer</h1>
                 <p>Creating immersive worlds through art, motion, and design.</p>
                 <a href="#work" class="btn">View My Work</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- UNIQUE HOME SECTION: CURRENTLY BUILDING / MILESTONES -->
+    <section class="home-unique">
+        <div class="home-unique-inner">
+            <div class="home-now-row">
+                <div class="home-now-pill">
+                    <span class="home-now-label">Currently building</span>
+                    <span class="home-now-value">“Skyrift” – toys-to-life RPG</span>
+                </div>
+                <div class="home-now-stats">
+                    <div class="home-stat">
+                        <span class="home-stat-number">3+</span>
+                        <span class="home-stat-label">years dev</span>
+                    </div>
+                    <div class="home-stat">
+                        <span class="home-stat-number">40+</span>
+                        <span class="home-stat-label">prototypes</span>
+                    </div>
+                    <div class="home-stat">
+                        <span class="home-stat-number">∞</span>
+                        <span class="home-stat-label">ideas</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="home-milestone-grid">
+                <div class="home-milestone-card">
+                    <h3>1. First spark</h3>
+                    <p>
+                        Early Skylanders fan-art, cursed first models, and tiny Unity tests.
+                        The “this might actually be a real game” era.
+                    </p>
+                </div>
+                <div class="home-milestone-card">
+                    <h3>2. Building the portal</h3>
+                    <p>
+                        Experimenting with NFC chips, homemade portals, and connecting toys to code.
+                        Hardware + art + game design all colliding.
+                    </p>
+                </div>
+                <div class="home-milestone-card">
+                    <h3>3. World in progress</h3>
+                    <p>
+                        Designing characters, enemies, and environments that all feel like they
+                        belong in the same universe – while still levelling up my art.
+                    </p>
+                </div>
             </div>
         </div>
     </section>
@@ -136,7 +186,7 @@
         </div>
     </section>
 
-    <!-- ABOUT + CONTACT MERGED SECTION -->
+    <!-- ABOUT + CONTACT MERGED -->
     <section id="about" class="about">
         <h2>About Me</h2>
         <p>
@@ -145,42 +195,11 @@
             My work combines emotion, imagination, and technical skill to create memorable experiences.
         </p>
 
-        <div class="about-contact-block">
-            <h3>Contact</h3>
-            <p>Email: <strong>youremail@example.com</strong></p>
-            <p>Instagram: <strong>@yourhandle</strong></p>
-            <p>ArtStation / Portfolio Links</p>
-        </div>
+        <h3>Contact</h3>
+        <p>Email: <strong>youremail@example.com</strong></p>
+        <p>Instagram: <strong>@yourhandle</strong></p>
+        <p>ArtStation / Portfolio Links</p>
     </section>
-
-    <!-- HOME BLOG PREVIEW START -->
-    <section id="home-blog" class="home-blog-preview">
-        <h2>Latest from the Blog</h2>
-        <p class="home-blog-intro">
-            A quick peek at recent posts. Visit the full blog for more detailed write-ups.
-        </p>
-        <div class="home-blog-cards">
-            <a class="home-blog-card" href="blog.html#post-glow-up" data-post-id="post-glow-up">
-                <h3 class="home-blog-title">Year 1 vs Year 3 – Creature Design Glow Up</h3>
-                <p class="home-blog-snippet">
-                    Comparing my very first enemy concept with my current redesign. I break down what changed in silhouette, anatomy, and color...
-                </p>
-            </a>
-            <a class="home-blog-card" href="blog.html#post-pipeline" data-post-id="post-pipeline">
-                <h3 class="home-blog-title">From First Sculpt to Game-Ready Character</h3>
-                <p class="home-blog-snippet">
-                    A look at my process learning sculpting, retopology, UVs, baking, and importing into the engine...
-                </p>
-            </a>
-            <a class="home-blog-card" href="blog.html#post-example-1" data-post-id="post-example-1">
-                <h3 class="home-blog-title">Example Post Title One</h3>
-                <p class="home-blog-snippet">
-                    This is an example post summary. Replace this with your own update about art, game development, or robotics...
-                </p>
-            </a>
-        </div>
-    </section>
-    <!-- HOME BLOG PREVIEW END -->
 
     <footer>
         © 2025 Your Name — All Rights Reserved
@@ -189,7 +208,11 @@
     <!-- ART VIEWER MODAL START -->
     <div class="art-viewer-overlay" id="artViewerOverlay" aria-hidden="true">
         <div class="overlay-backdrop" data-close="art-viewer"></div>
-        <div class="art-viewer-panel draggable-panel">
+        <div class="art-viewer-panel">
+            <button class="overlay-close-btn" id="artViewerClose" aria-label="Close art viewer">
+                <span class="close-icon"></span>
+            </button>
+
             <div class="art-main">
                 <h2 class="art-viewer-title" id="artViewerTitle">Artwork title</h2>
 
@@ -212,16 +235,11 @@
                     <!-- populated by JS -->
                 </div>
             </aside>
-
-            <button class="overlay-close-btn" id="artViewerClose" aria-label="Close art viewer">
-                <span class="close-icon"></span>
-            </button>
         </div>
     </div>
     <!-- ART VIEWER MODAL END -->
 
     <!-- SEARCH OVERLAY START -->
-    <!-- SEARCH OVERLAY COLORS & OPACITY controlled via CSS variables in style.css -->
     <div class="search-overlay" id="searchOverlay" aria-hidden="true">
         <div class="search-overlay-backdrop" data-close="search-overlay"></div>
         <div class="search-overlay-panel">
@@ -237,18 +255,16 @@
                     placeholder="Search art & blog..."
                     autocomplete="off"
                 />
-                <!-- SEARCH FILTERS (type + sort) -->
-                <div class="search-filters">
-                    <div class="search-filter-group">
-                        <button class="search-filter-btn active" data-type="all">All</button>
-                        <button class="search-filter-btn" data-type="art">Art only</button>
-                        <button class="search-filter-btn" data-type="blog">Blog only</button>
-                    </div>
-                    <div class="search-filter-group">
-                        <button class="search-filter-btn active" data-sort="newest">Newest first</button>
-                        <button class="search-filter-btn" data-sort="oldest">Oldest first</button>
-                    </div>
-                </div>
+            </div>
+
+            <!-- SEARCH FILTERS (type + sort) -->
+            <div class="search-filters">
+                <button class="search-filter-btn active" data-type="all">All</button>
+                <button class="search-filter-btn" data-type="art">Art only</button>
+                <button class="search-filter-btn" data-type="blog">Blog only</button>
+                <span class="search-filter-separator"></span>
+                <button class="search-filter-btn active" data-sort="newest">Newest first</button>
+                <button class="search-filter-btn" data-sort="oldest">Oldest first</button>
             </div>
 
             <div class="search-overlay-results" id="searchResults">
@@ -294,6 +310,12 @@
             const artFullscreenBtn = document.getElementById("artFullscreenBtn");
             const artMainWrapper = document.getElementById("artMainWrapper");
             const artViewerPanel = document.querySelector(".art-viewer-panel");
+
+            // allow resize by mouse, but no dragging
+            if (artViewerPanel) {
+                artViewerPanel.style.resize = "both";
+                artViewerPanel.style.overflow = "auto";
+            }
 
             const artData = [];
 
@@ -361,8 +383,6 @@
                 artViewerPanel.style.left = "";
                 artViewerPanel.style.top = "";
                 artViewerPanel.style.margin = "";
-                artViewerPanel.classList.remove("panel-floating");
-                artViewerOverlay.classList.remove("no-blur");
             }
 
             function openArtViewerById(id) {
@@ -408,11 +428,10 @@
                 });
             }
 
-            // Fullscreen toggle using Fullscreen API (with fallback)
+            // Fullscreen toggle using Fullscreen API
             let isFullscreen = false;
 
             function enterArtFullscreen() {
-                // MUST be full screen: requestFullscreen on wrapper
                 if (artMainWrapper.requestFullscreen) {
                     artMainWrapper.requestFullscreen().catch(() => {});
                 }
@@ -466,95 +485,9 @@
             window.openArtViewerById = openArtViewerById;
             window.closeArtViewer = closeArtViewer;
 
-            /* ==========================================
-               DRAGGABLE / RESIZABLE PANEL (ART VIEWER)
-               Drag from anywhere that isn't a clickable control.
-               Disabled while in fullscreen.
-               ========================================== */
-            function initDraggablePanel(overlaySelector, panelSelector) {
-                const overlay = document.querySelector(overlaySelector);
-                const panel = document.querySelector(panelSelector);
-                if (!overlay || !panel) return;
-
-                let isDragging = false;
-                let startX = 0, startY = 0;
-                let startLeft = 0, startTop = 0;
-
-                function isInteractive(el) {
-                    const tags = ["BUTTON", "A", "INPUT", "TEXTAREA", "SELECT", "LABEL"];
-                    while (el && el !== panel) {
-                        if (tags.includes(el.tagName)) return true;
-                        el = el.parentElement;
-                    }
-                    return false;
-                }
-
-                function onMouseDown(e) {
-                    if (e.button !== 0) return;
-                    if (document.fullscreenElement) return; // don't drag when maximised
-
-                    if (isInteractive(e.target)) return;
-
-                    isDragging = true;
-                    overlay.classList.add("no-blur");
-                    panel.classList.add("panel-floating");
-
-                    const rect = panel.getBoundingClientRect();
-                    panel.style.position = "fixed";
-                    panel.style.margin = "0";
-                    startLeft = rect.left;
-                    startTop = rect.top;
-                    startX = e.clientX;
-                    startY = e.clientY;
-
-                    document.addEventListener("mousemove", onMouseMove);
-                    document.addEventListener("mouseup", onMouseUp);
-                }
-
-                function onMouseMove(e) {
-                    if (!isDragging) return;
-                    const dx = e.clientX - startX;
-                    const dy = e.clientY - startY;
-                    let newLeft = startLeft + dx;
-                    let newTop = startTop + dy;
-
-                    const maxLeft = window.innerWidth - panel.offsetWidth;
-                    const maxTop = window.innerHeight - panel.offsetHeight;
-                    newLeft = Math.max(0, Math.min(maxLeft, newLeft));
-                    newTop = Math.max(0, Math.min(maxTop, newTop));
-
-                    panel.style.left = newLeft + "px";
-                    panel.style.top = newTop + "px";
-                }
-
-                function onMouseUp() {
-                    isDragging = false;
-                    document.removeEventListener("mousemove", onMouseMove);
-                    document.removeEventListener("mouseup", onMouseUp);
-                }
-
-                panel.addEventListener("mousedown", onMouseDown);
-
-                // Enable resize via mouse (edges/corners) on desktop
-                panel.style.resize = "both";
-                panel.style.overflow = "auto";
-
-                // Any click inside panel (non-drag) can be used later to toggle blur if desired
-                panel.addEventListener("mousedown", () => {
-                    if (!document.fullscreenElement) {
-                        overlay.classList.add("no-blur");
-                    }
-                });
-            }
-
-            // Init draggable for art viewer
-            initDraggablePanel(".art-viewer-overlay", ".art-viewer-panel");
-
             /* ===========================
-               GLOBAL SEARCH DATA
+               GLOBAL SEARCH DATA (HOME)
                =========================== */
-
-            // Seed blog post metadata for global search on the home page
             const blogSearchDataSeed = [
                 {
                     id: "post-glow-up",
@@ -821,18 +754,18 @@
                     if (res.type === "art") {
                         const rawSnippet = makeSnippet(res.snippetSource || "", q);
                         const card = document.createElement("button");
-                        card.className = "search-result search-result-art";
-                        card.innerHTML = `
-                            <div class="search-result-thumb">
-                                <img src="${res.src}" alt="${res.title}">
-                            </div>
-                            <div class="search-result-info">
-                                <h3 class="search-result-title">${highlightText(res.title, q)}</h3>
-                                <p class="search-result-snippet">
-                                    ${highlightText(rawSnippet, q)}
-                                </p>
-                            </div>
-                        `;
+                            card.className = "search-result search-result-art";
+                            card.innerHTML = `
+                                <div class="search-result-thumb">
+                                    <img src="${res.src}" alt="${res.title}">
+                                </div>
+                                <div class="search-result-info">
+                                    <h3 class="search-result-title">${highlightText(res.title, q)}</h3>
+                                    <p class="search-result-snippet">
+                                        ${highlightText(rawSnippet, q)}
+                                    </p>
+                                </div>
+                            `;
                         card.addEventListener("click", () => handleResultClick(res));
                         list.appendChild(card);
                     } else {
@@ -861,7 +794,6 @@
                 });
             }
 
-            // Handle search result click: navigate or open viewer depending on type & page
             function handleResultClick(result) {
                 closeSearchOverlay();
                 if (result.type === "art") {
@@ -875,7 +807,6 @@
                 }
             }
 
-            // Prepare default search content on load
             if (searchOverlay && searchResults) {
                 renderDefaultSearchResults();
             }
