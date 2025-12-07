@@ -1,20 +1,19 @@
-<!-- index.html -->
+<!-- blog.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Artist Portfolio</title>
+    <title>Dev Blog – Game & Art Progress</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 
-<!-- HOME BACKGROUND: change via CSS variables --home-bg-color / --home-hero-bg-image -->
-<body class="home-page" data-page="home">
+<body data-page="blog">
 
-    <!-- NAVIGATION -->
+    <!-- NAVIGATION (same as home, but Blog active) -->
     <header>
         <nav>
             <div class="logo">Harris Ross</div>
@@ -31,242 +30,196 @@
             </div>
 
             <ul>
-                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li><a href="index.html" class="nav-link">Home</a></li>
                 <li><a href="index.html#work" class="nav-link">Portfolio</a></li>
-                <li><a href="blog.html" class="nav-link">Blog</a></li>
+                <li><a href="blog.html" class="nav-link active">Blog</a></li>
                 <li><a href="index.html#about" class="nav-link">About</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- HERO SECTION -->
-    <section class="hero">
-        <div class="hero-inner">
-
-            <!-- HERO ILLUSTRATION TEMPLATE: replace this with my own drawing -->
-            <div class="hero-illustration-template">
-                <div class="hero-illustration-box">
-                    <!-- HERO ILLUSTRATION TEMPLATE: replace this box with a custom illustration that blends with the background -->
-                    <span class="hero-illustration-text">
-                        Hero art placeholder<br />
-                        (drop your own image here)
-                    </span>
-                </div>
-            </div>
-
-            <div class="hero-text">
-                <h1>Artist • Animator • Game Developer</h1>
-                <p>Creating immersive worlds through art, motion, and design.</p>
-                <a href="#work" class="btn">View My Work</a>
-            </div>
+    <!-- BLOG HERO / INTRO -->
+    <!-- BLOG BACKGROUND: change via CSS blog-hero styles -->
+    <section class="blog-hero">
+        <div class="blog-hero-inner">
+            <h1>The Unofficial Skyrift blog</h1>
+            <p>
+                A progress report of some of my biggest projects spanning over 3 years and counting. This blog includes the development of 
+                my Skylanders reimagined video game, experimental robotics, art, and whatever else I can think up!
+            </p>
         </div>
     </section>
 
-    <!-- UNIQUE HOME SECTION: CURRENTLY BUILDING / MILESTONES -->
-    <section class="home-unique">
-        <div class="home-unique-inner">
-            <div class="home-now-row">
-                <div class="home-now-pill">
-                    <span class="home-now-label">Currently building</span>
-                    <span class="home-now-value">“Skyrift” – toys-to-life RPG</span>
-                </div>
-                <div class="home-now-stats">
-                    <div class="home-stat">
-                        <span class="home-stat-number">3+</span>
-                        <span class="home-stat-label">years dev</span>
-                    </div>
-                    <div class="home-stat">
-                        <span class="home-stat-number">40+</span>
-                        <span class="home-stat-label">prototypes</span>
-                    </div>
-                    <div class="home-stat">
-                        <span class="home-stat-number">∞</span>
-                        <span class="home-stat-label">ideas</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="home-milestone-grid">
-                <div class="home-milestone-card">
-                    <h3>1. First spark</h3>
-                    <p>
-                        Early Skylanders-inspired fan-art, cursed first models, and tiny Unity tests.
-                        The “this might actually be a real game” era.
-                    </p>
-                </div>
-                <div class="home-milestone-card">
-                    <h3>2. Building the portal</h3>
-                    <p>
-                        Experimenting with NFC chips, homemade portals, and connecting toys to code.
-                        Hardware + art + game design colliding.
-                    </p>
-                </div>
-                <div class="home-milestone-card">
-                    <h3>3. World in progress</h3>
-                    <p>
-                        Designing characters, enemies, and environments that feel like the same universe –
-                        while still levelling up my art.
-                    </p>
-                </div>
-            </div>
+    <!-- BLOG POSTS -->
+    <section class="blog">
+        <!-- BLOG LAYOUT TOGGLES START -->
+        <div class="blog-layout-toggles">
+            <button class="layout-toggle-btn active" data-layout="1" aria-label="Single column">
+                <span class="layout-icon layout-icon-1"></span>
+            </button>
+            <button class="layout-toggle-btn" data-layout="2" aria-label="Two columns">
+                <span class="layout-icon layout-icon-2"></span>
+            </button>
+            <button class="layout-toggle-btn" data-layout="4" aria-label="Four columns">
+                <span class="layout-icon layout-icon-4"></span>
+            </button>
         </div>
-    </section>
+        <!-- BLOG LAYOUT TOGGLES END -->
 
-    <!-- PORTFOLIO SECTION -->
-    <section id="work" class="portfolio">
-        <h2>Portfolio</h2>
+        <div class="blog-posts layout-1">
 
-        <div class="filter-buttons">
-            <button data-filter="all">All</button>
-            <button data-filter="paintings">Paintings</button>
-            <button data-filter="animation">Animation</button>
-            <button data-filter="sketches">Sketches</button>
-            <button data-filter="characters">Character Design</button>
-            <button data-filter="gamedev">Game Dev</button>
-        </div>
-
-        <div class="gallery">
-            <!-- Replace the image URLs below with your own -->
-            <div class="item paintings"
-                 data-art-id="art-1"
-                 data-art-title="Example Painting Title"
-                 data-art-description="An example painting demonstrating colour, composition, and atmosphere. Replace this description with your own notes about process and intent."
-                 data-art-date="2025-03-01">
-                <img src="AIE/Ani 3.jpg" alt="Painting">
-            </div>
-
-            <div class="item animation"
-                 data-art-id="art-2"
-                 data-art-title="Example Animation Loop"
-                 data-art-description="Short looping animation used as a test for timing, spacing, and character personality."
-                 data-art-date="2025-02-15">
-                <img src="images/animation1.gif" alt="Animation">
-            </div>
-
-            <div class="item sketches"
-                 data-art-id="art-3"
-                 data-art-title="Example Sketch Page"
-                 data-art-description="Rough exploratory sketches for characters and props."
-                 data-art-date="2024-11-10">
-                <img src="images/sketch1.jpg" alt="Sketch">
-            </div>
-
-            <div class="item characters"
-                 data-art-id="art-4"
-                 data-art-title="Example Character Design"
-                 data-art-description="A character concept sheet showing full body, expressions, and outfit details."
-                 data-art-date="2024-09-01">
-                <img src="images/character1.jpg" alt="Character Design">
-            </div>
-
-            <div class="item gamedev"
-                 data-art-id="art-5"
-                 data-art-title="Example Game Screenshot"
-                 data-art-description="In-engine screenshot from a prototype level."
-                 data-art-date="2024-06-20">
-                <img src="images/gamedev1.jpg" alt="Game Dev">
-            </div>
-
-            <!-- Additional template artworks -->
-            <div class="item paintings"
-                 data-art-id="art-6"
-                 data-art-title="Example Artwork Title A"
-                 data-art-description="Template artwork slot A. Replace the image, title, and description with your own piece."
-                 data-art-date="2023-12-12">
-                <img src="images/example-art-a.jpg" alt="Example Artwork A">
-            </div>
-
-            <div class="item characters"
-                 data-art-id="art-7"
-                 data-art-title="Example Artwork Title B"
-                 data-art-description="Template artwork slot B. Use this for another character or creature design."
-                 data-art-date="2023-05-05">
-                <img src="images/example-art-b.jpg" alt="Example Artwork B">
-            </div>
-        </div>
-    </section>
-
-    <!-- LATEST FROM BLOG (HOME PREVIEW) -->
-    <section id="home-blog" class="home-blog-preview">
-        <h2>Latest from the Blog</h2>
-        <div class="home-blog-grid">
-            <article class="home-blog-card">
-                <h3>Year 1 vs Year 3 – Creature Design Glow Up</h3>
-                <p>
-                    Comparing my very first enemy concept with my current redesign. I break down what
-                    changed in silhouette, anatomy, and color.
+            <!-- POST 1 -->
+            <article class="post-card" data-post-id="post-glow-up" data-post-date="2025-01-15">
+                <div class="post-meta">
+                    <span class="post-date">2025</span>
+                    <span class="post-tag">Art Growth</span>
+                </div>
+                <h2 class="post-title">Year 1 vs Year 3 – Creature Design Glow Up</h2>
+                <p class="post-summary">
+                    Comparing my very first enemy concept with my current redesign. 
+                    I break down what changed in silhouette, anatomy, and color.
                 </p>
-                <a href="blog.html#post-glow-up" class="home-blog-link">Open post</a>
+
+                <div class="post-before-after">
+                    <div class="ba">
+                        <h3>Before</h3>
+                        <!-- replace with your own image -->
+                        <img src="images/before-creature.jpg" alt="Old creature design">
+                        <p>My early version – lots of details, but weak silhouette and muddy shapes.</p>
+                    </div>
+                    <div class="ba">
+                        <h3>After</h3>
+                        <!-- replace with your own image -->
+                        <img src="images/after-creature.jpg" alt="Improved creature design">
+                        <p>Redesigned with clearer shape language, stronger pose, and focused color palette.</p>
+                    </div>
+                </div>
+
+                <p class="post-body">
+                    I learned to thumbnail silhouettes first, then layer in details. 
+                    This helped the creature read better at game-ready sizes on screen.
+                </p>
             </article>
-            <article class="home-blog-card">
-                <h3>From First Sculpt to Game-Ready Character</h3>
-                <p>
+
+            <!-- POST 2 -->
+            <article class="post-card" data-post-id="post-pipeline" data-post-date="2024-06-10">
+                <div class="post-meta">
+                    <span class="post-date">2024</span>
+                    <span class="post-tag">3D Pipeline</span>
+                </div>
+                <h2 class="post-title">From First Sculpt to Game-Ready Character</h2>
+                <p class="post-summary">
                     A look at my process learning sculpting, retopology, UVs, baking, and importing into the engine.
                 </p>
-                <a href="blog.html#post-pipeline" class="home-blog-link">Open post</a>
-            </article>
-            <article class="home-blog-card">
-                <h3>First post.</h3>
-                <p>
-                    A messy, honest starting point – proof that the site exists and the dev journey has actually begun.
+                <p class="post-body">
+                    My first characters never left the sculpting phase. Over time, I forced myself to finish the full pipeline:
+                    clean topology, proper UVs, normal/AO maps, and finally seeing them running around in-game.
                 </p>
-                <a href="blog.html#post-first" class="home-blog-link">Open post</a>
             </article>
+
+            <!-- POST 3 (TEMPLATE / REAL TEXT SLOT) -->
+            <article class="post-card" data-post-id="post-first" data-post-date="2025-12-05">
+                <div class="post-meta">
+                    <span class="post-date">5/12/2025</span>
+                    <span class="post-tag">A questionable start</span>
+                </div>
+                <h2 class="post-title">First post.</h2>
+                 
+                <p class="post-summary" style="color: #29023d;">
+                    Example text – replace this with your real first post content.
+                </p>
+
+                <div class="post-before-after">
+                    <div class="ba">
+                        <h3>Before</h3>
+                        <!-- replace with your own image -->
+                        <img src="images/before-creature.jpg" alt="Old creature design">
+                        <p>My early version – lots of details, but weak silhouette and muddy shapes.</p>
+                    </div>
+                    <div class="ba">
+                        <h3>After</h3>
+                        <!-- replace with your own image -->
+                        <img src="images/after-creature.jpg" alt="Improved creature design">
+                        <p>Redesigned with clearer shape language, stronger pose, and focused color palette.</p>
+                    </div>
+                </div>
+
+                <p class="post-body">
+                    Replace this paragraph with the full body of your first blog entry. You can write as much as you want here;
+                    the blog list will only show the first ~200 words, with the full text visible in the reader view.
+                </p>
+            </article>
+
+            <!-- EXTRA TEMPLATE POSTS -->
+            <article class="post-card" data-post-id="post-example-1" data-post-date="2023-03-20">
+                <div class="post-meta">
+                    <span class="post-date">2023</span>
+                    <span class="post-tag">Example Post</span>
+                </div>
+                <h2 class="post-title">Example Post Title One</h2>
+                <p class="post-summary">
+                    This is an example post summary. Replace this with your own update about art, game development, or robotics.
+                </p>
+                <p class="post-body">
+                    Example body text for a template blog entry. You can duplicate this card and change the title, tag, and content
+                    to quickly add new posts without rewriting the structure.
+                </p>
+            </article>
+
+            <article class="post-card" data-post-id="post-example-2" data-post-date="2022-08-09">
+                <div class="post-meta">
+                    <span class="post-date">2022</span>
+                    <span class="post-tag">Example Post</span>
+                </div>
+                <h2 class="post-title">Example Post Title Two</h2>
+                <p class="post-summary">
+                    Another example post summary to show how multiple entries look in the list.
+                </p>
+                <p class="post-body">
+                    Use this as a blueprint for future dev logs or reflections. Keep the structure but rewrite the text so it fits
+                    the project you are documenting.
+                </p>
+            </article>
+
         </div>
-    </section>
-
-    <!-- ABOUT + CONTACT (MERGED) -->
-    <section id="about" class="about">
-        <h2>About Me</h2>
-        <p>
-            I am a multidisciplinary artist specializing in animation, fine art, and game development. 
-            I love crafting visual stories, designing worlds, and bringing characters to life through illustration and motion. 
-            My work combines emotion, imagination, and technical skill to create memorable experiences.
-        </p>
-
-        <h3>Contact</h3>
-        <p>Email: <strong>youremail@example.com</strong></p>
-        <p>Instagram: <strong>@yourhandle</strong></p>
-        <p>ArtStation / Portfolio Links</p>
     </section>
 
     <footer>
-        © 2025 Your Name — All Rights Reserved
+        © 2025 Harris Ross — All Rights Reserved
     </footer>
 
-    <!-- ART VIEWER MODAL START -->
-    <div class="art-viewer-overlay" id="artViewerOverlay" aria-hidden="true">
-        <div class="overlay-backdrop" data-close="art-viewer"></div>
-        <div class="art-viewer-panel">
-            <button class="overlay-close-btn" id="artViewerClose" aria-label="Close art viewer">
+    <!-- BLOG FULLSCREEN VIEWER START -->
+    <div class="blog-viewer-overlay" id="blogViewerOverlay" aria-hidden="true">
+        <div class="blog-viewer-backdrop" data-close="blog-viewer"></div>
+        <div class="blog-viewer-panel">
+            <button class="overlay-close-btn" id="blogViewerClose" aria-label="Close blog post">
                 <span class="close-icon"></span>
             </button>
 
-            <div class="art-main">
-                <h2 class="art-viewer-title" id="artViewerTitle">Artwork title</h2>
-
-                <div class="art-main-image-wrapper" id="artMainWrapper">
-                    <img id="artViewerImage" src="" alt="Selected artwork">
-                    <!-- Fullscreen icon placeholder; I’ll replace with my own graphic later -->
-                    <button class="art-fullscreen-btn" id="artFullscreenBtn" aria-label="Toggle fullscreen">
-                        <span class="fs-icon fs-enter"></span>
-                    </button>
+            <div class="blog-viewer-content">
+                <h2 id="blogViewerTitle">Blog title</h2>
+                <div id="blogViewerBody">
+                    <!-- full post content injected here -->
                 </div>
-
-                <p class="art-viewer-description" id="artViewerDescription">
-                    Artwork description will appear here.
-                </p>
             </div>
 
-            <aside class="art-sidebar">
-                <h3 class="art-sidebar-heading">Other artworks</h3>
-                <div class="art-list" id="artList">
-                    <!-- populated by JS -->
+            <!-- BLOG FULLSCREEN TOGGLE BUTTON -->
+            <button class="blog-fullscreen-btn" id="blogFullscreenBtn" aria-label="Toggle blog fullscreen">
+                <span class="fs-icon fs-enter"></span>
+            </button>
+
+            <!-- suggestions wrapper for fade-in -->
+            <div class="blog-viewer-suggestions-wrapper" id="blogViewerSuggestionsWrapper">
+                <div class="blog-viewer-suggestions">
+                    <h3 class="suggestions-heading">Next posts</h3>
+                    <div class="suggestions-row" id="blogViewerSuggestions">
+                        <!-- up to 3 suggestion cards filled by JS -->
+                    </div>
                 </div>
-            </aside>
+            </div>
         </div>
     </div>
-    <!-- ART VIEWER MODAL END -->
+    <!-- BLOG FULLSCREEN VIEWER END -->
 
     <!-- SEARCH OVERLAY START -->
     <div class="search-overlay" id="searchOverlay" aria-hidden="true">
@@ -284,16 +237,16 @@
                     placeholder="Search art & blog..."
                     autocomplete="off"
                 />
+            </div>
 
-                <!-- SEARCH FILTERS -->
-                <div class="search-filters">
-                    <button class="search-filter-btn active" data-type="all">All</button>
-                    <button class="search-filter-btn" data-type="art">Art only</button>
-                    <button class="search-filter-btn" data-type="blog">Blog only</button>
-                    <span class="search-filter-divider"></span>
-                    <button class="search-filter-btn active" data-sort="newest">Newest</button>
-                    <button class="search-filter-btn" data-sort="oldest">Oldest</button>
-                </div>
+            <!-- SEARCH FILTERS (type + sort) -->
+            <div class="search-filters">
+                <button class="search-filter-btn active" data-type="all">All</button>
+                <button class="search-filter-btn" data-type="art">Art only</button>
+                <button class="search-filter-btn" data-type="blog">Blog only</button>
+                <span class="search-filter-separator"></span>
+                <button class="search-filter-btn active" data-sort="newest">Newest first</button>
+                <button class="search-filter-btn" data-sort="oldest">Oldest first</button>
             </div>
 
             <div class="search-overlay-results" id="searchResults">
@@ -306,234 +259,352 @@
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             /* ===========================
-               PORTFOLIO FILTER
+               BLOG LIST PREVIEW LOGIC
+               (first ~200 words only)
                =========================== */
-            const filterButtons = document.querySelectorAll(".filter-buttons button");
-            const items = document.querySelectorAll(".gallery .item");
+            const posts = document.querySelectorAll(".blog-posts .post-card");
+            const MAX_PREVIEW_WORDS = 200;
 
-            filterButtons.forEach(btn => {
-                btn.addEventListener("click", () => {
-                    const filter = btn.dataset.filter;
+            posts.forEach((post, index) => {
+                const metaEl = post.querySelector(".post-meta");
+                const summaryEl = post.querySelector(".post-summary");
+                const bodyEl = post.querySelector(".post-body");
+                const beforeAfterEl = post.querySelector(".post-before-after");
 
-                    items.forEach(item => {
-                        if (filter === "all" || item.classList.contains(filter)) {
-                            item.style.display = "block";
-                        } else {
-                            item.style.display = "none";
-                        }
-                    });
-                });
+                // Build full HTML once for viewer
+                const container = document.createElement("div");
+                if (metaEl) container.appendChild(metaEl.cloneNode(true));
+                if (summaryEl) container.appendChild(summaryEl.cloneNode(true));
+                if (beforeAfterEl) container.appendChild(beforeAfterEl.cloneNode(true));
+                if (bodyEl) container.appendChild(bodyEl.cloneNode(true));
+                post.dataset.fullHtml = container.innerHTML;
+
+                // Build preview text (~200 words) for the list
+                const fullTextParts = [];
+                if (summaryEl) fullTextParts.push(summaryEl.textContent.trim());
+                if (bodyEl) fullTextParts.push(bodyEl.textContent.trim());
+                const fullText = fullTextParts.join(" ");
+                const words = fullText.split(/\s+/);
+                const previewWords = words.slice(0, MAX_PREVIEW_WORDS);
+                const previewText = previewWords.join(" ") + (words.length > MAX_PREVIEW_WORDS ? " ... read more" : "");
+
+                if (summaryEl) {
+                    summaryEl.textContent = previewText;
+                }
+                if (bodyEl) {
+                    bodyEl.style.display = "none"; // hide full body in list
+                }
+                if (beforeAfterEl) {
+                    beforeAfterEl.style.display = "none"; // hide image comparison in list view
+                }
             });
 
             /* ===========================
-               ART VIEWER LOGIC
+               BLOG VIEWER LOGIC
                =========================== */
-            const galleryItems = document.querySelectorAll(".gallery .item");
-            const artViewerOverlay = document.getElementById("artViewerOverlay");
-            const artViewerTitle = document.getElementById("artViewerTitle");
-            const artViewerImage = document.getElementById("artViewerImage");
-            const artViewerDescription = document.getElementById("artViewerDescription");
-            const artListContainer = document.getElementById("artList");
-            const artViewerClose = document.getElementById("artViewerClose");
-            const artBackdrop = document.querySelector(".art-viewer-overlay .overlay-backdrop");
-            const artFullscreenBtn = document.getElementById("artFullscreenBtn");
-            const artMainWrapper = document.getElementById("artMainWrapper");
+            const blogViewerOverlay = document.getElementById("blogViewerOverlay");
+            const blogViewerTitle = document.getElementById("blogViewerTitle");
+            const blogViewerBody = document.getElementById("blogViewerBody");
+            const blogViewerSuggestions = document.getElementById("blogViewerSuggestions");
+            const blogViewerSuggestionsWrapper = document.getElementById("blogViewerSuggestionsWrapper");
+            const blogViewerClose = document.getElementById("blogViewerClose");
+            const blogBackdrop = document.querySelector(".blog-viewer-backdrop");
+            const blogViewerPanel = document.querySelector(".blog-viewer-panel");
+            const blogViewerContent = document.querySelector(".blog-viewer-content");
+            const blogFullscreenBtn = document.getElementById("blogFullscreenBtn");
 
-            const artData = [];
+            // allow resize by mouse, but no dragging
+            if (blogViewerPanel) {
+                blogViewerPanel.style.resize = "both";
+                blogViewerPanel.style.overflow = "auto";
+            }
 
-            galleryItems.forEach((item, index) => {
-                const img = item.querySelector("img");
-                if (!img) return;
+            let isBlogFullscreen = false;
 
-                const id = item.dataset.artId || "art-" + index;
-                const title = item.dataset.artTitle || img.alt || "Untitled artwork";
-                const description = item.dataset.artDescription || "";
-                const date = item.dataset.artDate || "2024-01-01";
+            function resetBlogPanelPosition() {
+                if (!blogViewerPanel) return;
+                blogViewerPanel.style.position = "";
+                blogViewerPanel.style.left = "";
+                blogViewerPanel.style.top = "";
+                blogViewerPanel.style.margin = "";
+            }
 
-                artData.push({
-                    id,
-                    title,
-                    description,
-                    src: img.getAttribute("src"),
-                    date
+            function openBlogFromElement(post) {
+                if (!post || !blogViewerOverlay) return;
+
+                const titleEl = post.querySelector(".post-title");
+                const title = titleEl ? titleEl.textContent.trim() : "Blog post";
+                const fullHtml = post.dataset.fullHtml;
+
+                blogViewerTitle.textContent = title;
+                blogViewerBody.innerHTML = fullHtml || "";
+
+                updateBlogSuggestions(post);
+                resetBlogPanelPosition();
+                attachSuggestionsScrollWatcher();
+
+                blogViewerOverlay.classList.add("open");
+                document.body.classList.add("blog-viewer-open");
+                blogViewerOverlay.setAttribute("aria-hidden", "false");
+            }
+
+            function closeBlogViewer() {
+                if (!blogViewerOverlay) return;
+                if (document.fullscreenElement === blogViewerPanel) {
+                    document.exitFullscreen().catch(() => {});
+                }
+                isBlogFullscreen = false;
+                updateBlogFullscreenIcon();
+                blogViewerOverlay.classList.remove("open");
+                document.body.classList.remove("blog-viewer-open");
+                blogViewerOverlay.setAttribute("aria-hidden", "true");
+                resetBlogPanelPosition();
+                if (blogViewerPanel) {
+                    blogViewerPanel.style.resize = "both";
+                }
+            }
+
+            function makeSuggestionSnippet(text) {
+                const words = text.split(/\s+/);
+                const snippetWords = words.slice(0, 40);
+                return snippetWords.join(" ") + (words.length > 40 ? " ... read more" : "");
+            }
+
+            function updateBlogSuggestions(currentPost) {
+                if (!blogViewerSuggestions) return;
+                blogViewerSuggestions.innerHTML = "";
+
+                const all = Array.from(posts).filter(p => p !== currentPost);
+                if (all.length === 0) return;
+
+                // randomize order
+                const shuffled = all.slice().sort(() => Math.random() - 0.5);
+                const others = shuffled.slice(0, 3);
+
+                others.forEach(post => {
+                    const titleEl = post.querySelector(".post-title");
+                    const summaryEl = post.querySelector(".post-summary");
+                    const title = titleEl ? titleEl.textContent.trim() : "Blog post";
+                    const summary = summaryEl ? summaryEl.textContent.trim() : "";
+                    const snippet = makeSuggestionSnippet(summary);
+
+                    const card = document.createElement("button");
+                    card.className = "suggestion-card";
+                    card.innerHTML = `
+                        <h4 class="suggestion-title">${title}</h4>
+                        <p class="suggestion-snippet">
+                            ${snippet}
+                        </p>
+                    `;
+                    card.addEventListener("click", () => openBlogFromElement(post));
+                    blogViewerSuggestions.appendChild(card);
                 });
+            }
 
-                item.addEventListener("click", () => {
-                    openArtViewerById(id);
+            // Fade-in of next posts when reaching near bottom
+            function attachSuggestionsScrollWatcher() {
+                if (!blogViewerContent || !blogViewerSuggestionsWrapper) return;
+
+                function onScroll() {
+                    const { scrollTop, scrollHeight, clientHeight } = blogViewerContent;
+                    if (scrollTop + clientHeight >= scrollHeight - 40) {
+                        blogViewerSuggestionsWrapper.classList.add("suggestions-visible");
+                        blogViewerContent.removeEventListener("scroll", onScroll);
+                    }
+                }
+
+                blogViewerSuggestionsWrapper.classList.remove("suggestions-visible");
+                blogViewerContent.removeEventListener("scroll", onScroll);
+                blogViewerContent.addEventListener("scroll", onScroll);
+            }
+
+            posts.forEach(post => {
+                post.addEventListener("click", () => {
+                    closeArtViewerIfOpen();
+                    openBlogFromElement(post);
                 });
             });
 
-            function buildArtList() {
-                if (!artListContainer) return;
-                artListContainer.innerHTML = "";
-                artData.forEach(art => {
-                    const button = document.createElement("button");
-                    button.className = "art-list-item";
-                    button.setAttribute("data-art-id", art.id);
-                    button.innerHTML = `
-                        <div class="art-list-thumb">
-                            <img src="${art.src}" alt="${art.title}">
-                        </div>
-                        <div class="art-list-text">
-                            <span class="art-list-title">${art.title}</span>
-                        </div>
-                    `;
-                    button.addEventListener("click", () => {
-                        openArtViewerById(art.id);
-                    });
-                    artListContainer.appendChild(button);
-                });
+            if (blogViewerClose) {
+                blogViewerClose.addEventListener("click", closeBlogViewer);
             }
-
-            function setActiveArtListItem(id) {
-                if (!artListContainer) return;
-                const listItems = artListContainer.querySelectorAll(".art-list-item");
-                listItems.forEach(el => {
-                    if (el.dataset.artId === id) {
-                        el.classList.add("active");
-                    } else {
-                        el.classList.remove("active");
+            if (blogBackdrop) {
+                blogBackdrop.addEventListener("click", (e) => {
+                    if (e.target.dataset.close === "blog-viewer") {
+                        closeBlogViewer();
                     }
                 });
             }
 
-            function openArtViewerById(id) {
-                const art = artData.find(a => a.id === id);
-                if (!art) return;
-
-                if (!artListContainer.innerHTML.trim()) {
-                    buildArtList();
+            // Optional: open a specific post via hash, e.g., blog.html#post-glow-up
+            const hash = window.location.hash.replace("#", "");
+            if (hash) {
+                const targetPost = document.querySelector(`.post-card[data-post-id="${hash}"]`);
+                if (targetPost) {
+                    openBlogFromElement(targetPost);
                 }
-
-                artViewerTitle.textContent = art.title;
-                artViewerImage.src = art.src;
-                artViewerImage.alt = art.title;
-                artViewerDescription.textContent = art.description;
-
-                setActiveArtListItem(id);
-
-                artViewerOverlay.classList.add("open");
-                document.body.classList.add("art-viewer-open");
-                artViewerOverlay.setAttribute("aria-hidden", "false");
             }
 
-            function closeArtViewer() {
-                if (document.fullscreenElement) {
+            // BLOG FULLSCREEN BUTTON: full screen, no stretching (CSS handles appearance)
+            function enterBlogFullscreen() {
+                if (!blogViewerPanel) return;
+                if (blogViewerPanel.requestFullscreen) {
+                    blogViewerPanel.requestFullscreen().catch(() => {});
+                }
+                blogViewerPanel.style.resize = "none"; // can't resize while maximised
+                isBlogFullscreen = true;
+                updateBlogFullscreenIcon();
+            }
+
+            function exitBlogFullscreen() {
+                if (document.fullscreenElement === blogViewerPanel && document.exitFullscreen) {
                     document.exitFullscreen().catch(() => {});
                 }
-                document.body.classList.remove("fullscreen-art");
-                artViewerOverlay.classList.remove("open");
-                document.body.classList.remove("art-viewer-open");
-                artViewerOverlay.setAttribute("aria-hidden", "true");
+                blogViewerPanel.style.resize = "both";
+                isBlogFullscreen = false;
+                updateBlogFullscreenIcon();
             }
 
-            if (artViewerClose) {
-                artViewerClose.addEventListener("click", closeArtViewer);
-            }
-            if (artBackdrop) {
-                artBackdrop.addEventListener("click", (e) => {
-                    if (e.target.dataset.close === "art-viewer") {
-                        closeArtViewer();
-                    }
-                });
-            }
-
-            // Fullscreen toggle using Fullscreen API
-            let isFullscreen = false;
-
-            function enterArtFullscreen() {
-                if (artMainWrapper.requestFullscreen) {
-                    artMainWrapper.requestFullscreen().catch(() => {});
-                }
-                document.body.classList.add("fullscreen-art");
-                isFullscreen = true;
-                updateFullscreenIcon();
-            }
-
-            function exitArtFullscreen() {
-                if (document.fullscreenElement && document.exitFullscreen) {
-                    document.exitFullscreen().catch(() => {});
-                }
-                document.body.classList.remove("fullscreen-art");
-                isFullscreen = false;
-                updateFullscreenIcon();
-            }
-
-            function updateFullscreenIcon() {
-                const icon = artFullscreenBtn.querySelector(".fs-icon");
+            function updateBlogFullscreenIcon() {
+                const icon = blogFullscreenBtn ? blogFullscreenBtn.querySelector(".fs-icon") : null;
                 if (!icon) return;
-                icon.classList.toggle("fs-enter", !isFullscreen);
-                icon.classList.toggle("fs-exit", isFullscreen);
+                icon.classList.toggle("fs-enter", !isBlogFullscreen);
+                icon.classList.toggle("fs-exit", isBlogFullscreen);
             }
 
-            if (artFullscreenBtn) {
-                artFullscreenBtn.addEventListener("click", (e) => {
+            if (blogFullscreenBtn) {
+                blogFullscreenBtn.addEventListener("click", (e) => {
                     e.stopPropagation();
-                    if (!isFullscreen) {
-                        enterArtFullscreen();
+                    if (!isBlogFullscreen) {
+                        enterBlogFullscreen();
                     } else {
-                        exitArtFullscreen();
+                        exitBlogFullscreen();
                     }
                 });
             }
 
             document.addEventListener("fullscreenchange", () => {
-                if (!document.fullscreenElement && isFullscreen) {
-                    document.body.classList.remove("fullscreen-art");
-                    isFullscreen = false;
-                    updateFullscreenIcon();
+                if (!document.fullscreenElement && isBlogFullscreen) {
+                    if (blogViewerPanel) {
+                        blogViewerPanel.style.resize = "both";
+                    }
+                    isBlogFullscreen = false;
+                    updateBlogFullscreenIcon();
                 }
             });
 
-            // Open art viewer from URL hash (index.html#art-3)
-            const hashArtId = window.location.hash.replace("#", "");
-            if (hashArtId && hashArtId.startsWith("art-")) {
-                openArtViewerById(hashArtId);
-            }
-
-            // Expose for cross-page / global search use
-            window.openArtViewerById = openArtViewerById;
-            window.closeArtViewer = closeArtViewer;
+            // Expose to search / home page
+            window.openBlogFromElement = openBlogFromElement;
+            window.closeBlogViewer = closeBlogViewer;
 
             /* ===========================
-               GLOBAL SEARCH DATA
+               BLOG LAYOUT TOGGLES
                =========================== */
-            const blogSearchDataSeed = [
+            const blogPostsContainer = document.querySelector(".blog-posts");
+            const layoutButtons = document.querySelectorAll(".layout-toggle-btn");
+
+            function setBlogLayout(layout) {
+                if (!blogPostsContainer) return;
+                blogPostsContainer.classList.remove("layout-1", "layout-2", "layout-4");
+                blogPostsContainer.classList.add("layout-" + layout);
+                layoutButtons.forEach(btn => {
+                    btn.classList.toggle("active", btn.dataset.layout === layout);
+                });
+            }
+
+            layoutButtons.forEach(btn => {
+                btn.addEventListener("click", () => {
+                    setBlogLayout(btn.dataset.layout || "1");
+                });
+            });
+
+            /* ===========================
+               GLOBAL SEARCH DATA (BLOG PAGE)
+               =========================== */
+            function getBlogSearchData() {
+                const data = [];
+                posts.forEach((post, index) => {
+                    const id = post.dataset.postId || "post-" + index;
+                    const titleEl = post.querySelector(".post-title");
+                    const summaryEl = post.querySelector(".post-summary");
+                    const bodyEl = post.querySelector(".post-body");
+                    const date = post.dataset.postDate || "2024-01-01";
+
+                    const title = titleEl ? titleEl.textContent.trim() : "Blog post";
+                    const contentParts = [];
+                    if (summaryEl) contentParts.push(summaryEl.textContent.trim());
+                    if (bodyEl) contentParts.push(bodyEl.textContent.trim());
+                    const content = contentParts.join(" ");
+
+                    data.push({
+                        id,
+                        title,
+                        content,
+                        element: post,
+                        date
+                    });
+                });
+                return data;
+            }
+
+            const blogSearchData = getBlogSearchData();
+
+            // Seed artworks for global search on the blog page
+            const artDataSeed = [
                 {
-                    id: "post-glow-up",
-                    title: "Year 1 vs Year 3 – Creature Design Glow Up",
-                    content: "Comparing my very first enemy concept with my current redesign. I break down what changed in silhouette, anatomy, and color. I learned to thumbnail silhouettes first, then layer in details. This helped the creature read better at game-ready sizes on screen.",
-                    date: "2025-01-15"
+                    id: "art-1",
+                    title: "Example Painting Title",
+                    description: "An example painting demonstrating colour, composition, and atmosphere. Replace this description with your own notes about process and intent.",
+                    src: "AIE/Ani 3.jpg",
+                    date: "2025-03-01"
                 },
                 {
-                    id: "post-pipeline",
-                    title: "From First Sculpt to Game-Ready Character",
-                    content: "A look at my process learning sculpting, retopology, UVs, baking, and importing into the engine. My first characters never left the sculpting phase. Over time, I forced myself to finish the full pipeline: clean topology, proper UVs, normal/AO maps, and finally seeing them running around in-game.",
-                    date: "2024-06-10"
+                    id: "art-2",
+                    title: "Example Animation Loop",
+                    description: "Short looping animation used as a test for timing, spacing, and character personality.",
+                    src: "images/animation1.gif",
+                    date: "2025-02-15"
                 },
                 {
-                    id: "post-first",
-                    title: "First post.",
-                    content: "Example text. My early version – lots of details, but weak silhouette and muddy shapes. Redesigned with clearer shape language, stronger pose, and focused color palette.",
-                    date: "2025-12-05"
+                    id: "art-3",
+                    title: "Example Sketch Page",
+                    description: "Rough exploratory sketches for characters and props.",
+                    src: "images/sketch1.jpg",
+                    date: "2024-11-10"
                 },
                 {
-                    id: "post-example-1",
-                    title: "Example Post Title One",
-                    content: "This is an example post summary. Replace this with your own update about art, game development, or robotics. Example body text for a template blog entry.",
-                    date: "2023-03-20"
+                    id: "art-4",
+                    title: "Example Character Design",
+                    description: "A character concept sheet showing full body, expressions, and outfit details.",
+                    src: "images/character1.jpg",
+                    date: "2024-09-01"
                 },
                 {
-                    id: "post-example-2",
-                    title: "Example Post Title Two",
-                    content: "Another example post summary to show how multiple entries look in the list. Use this as a blueprint for future dev logs or reflections.",
-                    date: "2022-08-09"
+                    id: "art-5",
+                    title: "Example Game Screenshot",
+                    description: "In-engine screenshot from a prototype level.",
+                    src: "images/gamedev1.jpg",
+                    date: "2024-06-20"
+                },
+                {
+                    id: "art-6",
+                    title: "Example Artwork Title A",
+                    description: "Template artwork slot A. Replace the image, title, and description with your own piece.",
+                    src: "images/example-art-a.jpg",
+                    date: "2023-12-12"
+                },
+                {
+                    id: "art-7",
+                    title: "Example Artwork Title B",
+                    description: "Template artwork slot B. Use this for another character or creature design.",
+                    src: "images/example-art-b.jpg",
+                    date: "2023-05-05"
                 }
             ];
 
             const siteContent = {
-                artworks: artData.slice(),
-                blogs: blogSearchDataSeed
+                artworks: artDataSeed,
+                blogs: blogSearchData
             };
 
             /* ===========================
@@ -545,8 +616,8 @@
             const searchInputOverlay = document.getElementById("searchInputOverlay");
             const searchResults = document.getElementById("searchResults");
             const searchCloseBtn = document.getElementById("searchClose");
-            const searchFilterButtons = document.querySelectorAll(".search-filter-btn");
-            const pageType = document.body.dataset.page || "home";
+            const filterButtons = document.querySelectorAll(".search-filter-btn");
+            const pageType = document.body.dataset.page || "blog";
 
             let currentTypeFilter = "all";
             let currentSortOrder = "newest";
@@ -556,7 +627,6 @@
                 searchOverlay.classList.add("open");
                 document.body.classList.add("search-open");
                 searchOverlay.setAttribute("aria-hidden", "false");
-
                 if (searchInputOverlay) {
                     searchInputOverlay.value = "";
                     renderDefaultSearchResults();
@@ -586,14 +656,14 @@
                 });
             }
 
-            searchFilterButtons.forEach(btn => {
+            filterButtons.forEach(btn => {
                 btn.addEventListener("click", () => {
                     const type = btn.dataset.type;
                     const sort = btn.dataset.sort;
 
                     if (type) {
                         currentTypeFilter = type;
-                        searchFilterButtons.forEach(b => {
+                        filterButtons.forEach(b => {
                             if (b.dataset.type) {
                                 b.classList.toggle("active", b.dataset.type === type);
                             }
@@ -601,7 +671,7 @@
                     }
                     if (sort) {
                         currentSortOrder = sort;
-                        searchFilterButtons.forEach(b => {
+                        filterButtons.forEach(b => {
                             if (b.dataset.sort) {
                                 b.classList.toggle("active", b.dataset.sort === sort);
                             }
@@ -658,7 +728,6 @@
             function renderDefaultSearchResults() {
                 if (!searchResults) return;
                 searchResults.innerHTML = "";
-
                 const wrapper = document.createElement("div");
                 wrapper.className = "search-default-grid";
 
@@ -712,6 +781,7 @@
 
                 let matches = [];
 
+                // Art
                 if (currentTypeFilter === "all" || currentTypeFilter === "art") {
                     siteContent.artworks.forEach(art => {
                         const haystack = (art.title + " " + (art.description || "")).toLowerCase();
@@ -728,6 +798,7 @@
                     });
                 }
 
+                // Blogs
                 if (currentTypeFilter === "all" || currentTypeFilter === "blog") {
                     siteContent.blogs.forEach(post => {
                         const haystack = (post.title + " " + post.content).toLowerCase();
@@ -737,6 +808,7 @@
                                 id: post.id,
                                 title: post.title,
                                 snippetSource: post.content,
+                                element: post.element,
                                 date: post.date
                             });
                         }
@@ -779,17 +851,17 @@
                     } else {
                         const rawSnippet = makeSnippet(res.snippetSource || "", q);
                         const card = document.createElement("button");
-                            card.className = "search-result search-result-blog";
-                            card.innerHTML = `
-                                <div class="search-result-info">
-                                    <h3 class="search-result-title">${highlightText(res.title, q)}</h3>
-                                    <p class="search-result-snippet">
-                                        ${highlightText(rawSnippet, q)} <span class="read-more">... read more</span>
-                                    </p>
-                                </div>
-                            `;
-                            card.addEventListener("click", () => handleResultClick(res));
-                            list.appendChild(card);
+                        card.className = "search-result search-result-blog";
+                        card.innerHTML = `
+                            <div class="search-result-info">
+                                <h3 class="search-result-title">${highlightText(res.title, q)}</h3>
+                                <p class="search-result-snippet">
+                                    ${highlightText(rawSnippet, q)} <span class="read-more">... read more</span>
+                                </p>
+                            </div>
+                        `;
+                        card.addEventListener("click", () => handleResultClick(res));
+                        list.appendChild(card);
                     }
                 });
 
@@ -805,18 +877,27 @@
             function handleResultClick(result) {
                 closeSearchOverlay();
                 if (result.type === "art") {
-                    if (pageType === "home") {
-                        openArtViewerById(result.id);
-                    } else {
-                        window.location.href = "index.html#" + result.id;
-                    }
+                    window.location.href = "index.html#" + result.id;
                 } else if (result.type === "blog") {
-                    window.location.href = "blog.html#" + result.id;
+                    if (pageType === "blog" && result.element) {
+                        openBlogFromElement(result.element);
+                    } else {
+                        window.location.href = "blog.html#" + result.id;
+                    }
                 }
             }
 
             if (searchOverlay && searchResults) {
                 renderDefaultSearchResults();
+            }
+
+            /* ===========================
+               CROSS-VIEWER CLOSE HELPERS
+               =========================== */
+            function closeArtViewerIfOpen() {
+                if (window.closeArtViewer) {
+                    window.closeArtViewer();
+                }
             }
         });
     </script>
