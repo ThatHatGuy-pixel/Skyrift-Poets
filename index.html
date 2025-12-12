@@ -11,12 +11,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 
+
 <body>
+
 
     <!-- NAVIGATION -->
     <header>
         <nav>
             <div class="logo">Harris Ross</div>
+
 
             <!-- SEARCH BAR IN NAV -->
             <div class="nav-search">
@@ -29,6 +32,7 @@
                 />
             </div>
 
+
             <ul>
                 <li><a href="index.html" class="nav-link active">Home</a></li>
                 <li><a href="index.html#work" class="nav-link">Portfolio</a></li>
@@ -39,9 +43,11 @@
         </nav>
     </header>
 
+
     <!-- HERO SECTION -->
     <section class="hero">
         <div class="hero-inner">
+
 
             <!-- HERO ILLUSTRATION TEMPLATE: replace this with my own drawing -->
             <div class="hero-illustration-template">
@@ -54,6 +60,7 @@
                 </div>
             </div>
 
+
             <div class="hero-text">
                 <h1>Artist • Animator • Game Developer</h1>
                 <p>Creating immersive worlds through art, motion, and design.</p>
@@ -62,9 +69,11 @@
         </div>
     </section>
 
+
     <!-- PORTFOLIO SECTION -->
     <section id="work" class="portfolio">
         <h2>Portfolio</h2>
+
 
         <div class="filter-buttons">
             <button data-filter="all">All</button>
@@ -75,6 +84,7 @@
             <button data-filter="gamedev">Game Dev</button>
         </div>
 
+
         <div class="gallery">
             <!-- Replace the image URLs below with your own -->
             <div class="item paintings"
@@ -84,12 +94,14 @@
                 <img src="AIE/Ani 3.jpg" alt="Painting">
             </div>
 
+
             <div class="item animation"
                  data-art-id="art-2"
                  data-art-title="Example Animation Loop"
                  data-art-description="Short looping animation used as a test for timing, spacing, and character personality.">
                 <img src="images/animation1.gif" alt="Animation">
             </div>
+
 
             <div class="item sketches"
                  data-art-id="art-3"
@@ -98,12 +110,14 @@
                 <img src="images/sketch1.jpg" alt="Sketch">
             </div>
 
+
             <div class="item characters"
                  data-art-id="art-4"
                  data-art-title="Example Character Design"
                  data-art-description="A character concept sheet showing full body, expressions, and outfit details.">
                 <img src="images/character1.jpg" alt="Character Design">
             </div>
+
 
             <div class="item gamedev"
                  data-art-id="art-5"
@@ -112,6 +126,7 @@
                 <img src="images/gamedev1.jpg" alt="Game Dev">
             </div>
 
+
             <!-- Additional template artworks -->
             <div class="item paintings"
                  data-art-id="art-6"
@@ -119,6 +134,7 @@
                  data-art-description="Template artwork slot A. Replace the image, title, and description with your own piece.">
                 <img src="images/example-art-a.jpg" alt="Example Artwork A">
             </div>
+
 
             <div class="item characters"
                  data-art-id="art-7"
@@ -129,15 +145,17 @@
         </div>
     </section>
 
+
     <!-- ABOUT SECTION -->
     <section id="about" class="about">
         <h2>About Me</h2>
         <p>
-            I am a multidisciplinary artist specializing in animation, fine art, and game development. 
-            I love crafting visual stories, designing worlds, and bringing characters to life through illustration and motion. 
+            I am a multidisciplinary artist specializing in animation, fine art, and game development.
+            I love crafting visual stories, designing worlds, and bringing characters to life through illustration and motion.
             My work combines emotion, imagination, and technical skill to create memorable experiences.
         </p>
     </section>
+
 
     <!-- CONTACT SECTION -->
     <section id="contact" class="contact">
@@ -147,9 +165,11 @@
         <p>ArtStation / Portfolio Links</p>
     </section>
 
+
     <footer>
         © 2025 Your Name — All Rights Reserved
     </footer>
+
 
     <!-- ART VIEWER MODAL START -->
     <div class="art-viewer-overlay" id="artViewerOverlay" aria-hidden="true">
@@ -157,6 +177,7 @@
         <div class="art-viewer-panel">
             <div class="art-main">
                 <h2 class="art-viewer-title" id="artViewerTitle">Artwork title</h2>
+
 
                 <div class="art-main-image-wrapper" id="artMainWrapper">
                     <img id="artViewerImage" src="" alt="Selected artwork">
@@ -166,10 +187,12 @@
                     </button>
                 </div>
 
+
                 <p class="art-viewer-description" id="artViewerDescription">
                     Artwork description will appear here.
                 </p>
             </div>
+
 
             <aside class="art-sidebar">
                 <h3 class="art-sidebar-heading">Other artworks</h3>
@@ -178,12 +201,14 @@
                 </div>
             </aside>
 
+
             <button class="overlay-close-btn" id="artViewerClose" aria-label="Close art viewer">
                 <span class="close-icon"></span>
             </button>
         </div>
     </div>
     <!-- ART VIEWER MODAL END -->
+
 
     <!-- SEARCH OVERLAY START -->
     <div class="search-overlay" id="searchOverlay" aria-hidden="true">
@@ -192,6 +217,7 @@
             <button class="overlay-close-btn" id="searchClose" aria-label="Close search">
                 <span class="close-icon"></span>
             </button>
+
 
             <div class="search-overlay-header">
                 <input
@@ -203,12 +229,14 @@
                 />
             </div>
 
+
             <div class="search-overlay-results" id="searchResults">
                 <!-- default and filtered search results rendered here -->
             </div>
         </div>
     </div>
     <!-- SEARCH OVERLAY END -->
+
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
@@ -218,9 +246,11 @@
             const buttons = document.querySelectorAll(".filter-buttons button");
             const items = document.querySelectorAll(".gallery .item");
 
+
             buttons.forEach(btn => {
                 btn.addEventListener("click", () => {
                     const filter = btn.dataset.filter;
+
 
                     items.forEach(item => {
                         if (filter === "all" || item.classList.contains(filter)) {
@@ -231,6 +261,7 @@
                     });
                 });
             });
+
 
             /* ===========================
                ART VIEWER LOGIC
@@ -246,15 +277,19 @@
             const artFullscreenBtn = document.getElementById("artFullscreenBtn");
             const artMainWrapper = document.getElementById("artMainWrapper");
 
+
             const artData = [];
+
 
             galleryItems.forEach((item, index) => {
                 const img = item.querySelector("img");
                 if (!img) return;
 
+
                 const id = item.dataset.artId || "art-" + index;
                 const title = item.dataset.artTitle || img.alt || "Untitled artwork";
                 const description = item.dataset.artDescription || "";
+
 
                 artData.push({
                     id,
@@ -263,11 +298,13 @@
                     src: img.getAttribute("src")
                 });
 
+
                 // Click on gallery item opens art viewer
                 item.addEventListener("click", () => {
                     openArtViewerById(id);
                 });
             });
+
 
             function buildArtList() {
                 if (!artListContainer) return;
@@ -291,6 +328,7 @@
                 });
             }
 
+
             function setActiveArtListItem(id) {
                 if (!artListContainer) return;
                 const listItems = artListContainer.querySelectorAll(".art-list-item");
@@ -303,25 +341,31 @@
                 });
             }
 
+
             function openArtViewerById(id) {
                 const art = artData.find(a => a.id === id);
                 if (!art) return;
 
+
                 if (!artListContainer.innerHTML.trim()) {
                     buildArtList();
                 }
+
 
                 artViewerTitle.textContent = art.title;
                 artViewerImage.src = art.src;
                 artViewerImage.alt = art.title;
                 artViewerDescription.textContent = art.description;
 
+
                 setActiveArtListItem(id);
+
 
                 artViewerOverlay.classList.add("open");
                 document.body.classList.add("art-viewer-open");
                 artViewerOverlay.setAttribute("aria-hidden", "false");
             }
+
 
             function closeArtViewer() {
                 if (document.fullscreenElement) {
@@ -333,6 +377,7 @@
                 artViewerOverlay.setAttribute("aria-hidden", "true");
             }
 
+
             if (artViewerClose) {
                 artViewerClose.addEventListener("click", closeArtViewer);
             }
@@ -340,8 +385,10 @@
                 artBackdrop.addEventListener("click", closeArtViewer);
             }
 
+
             // Fullscreen toggle using Fullscreen API (with fallback)
             let isFullscreen = false;
+
 
             function enterArtFullscreen() {
                 if (artMainWrapper.requestFullscreen) {
@@ -352,6 +399,7 @@
                 updateFullscreenIcon();
             }
 
+
             function exitArtFullscreen() {
                 if (document.fullscreenElement && document.exitFullscreen) {
                     document.exitFullscreen().catch(() => {});
@@ -361,12 +409,14 @@
                 updateFullscreenIcon();
             }
 
+
             function updateFullscreenIcon() {
                 const icon = artFullscreenBtn.querySelector(".fs-icon");
                 if (!icon) return;
                 icon.classList.toggle("fs-enter", !isFullscreen);
                 icon.classList.toggle("fs-exit", isFullscreen);
             }
+
 
             if (artFullscreenBtn) {
                 artFullscreenBtn.addEventListener("click", (e) => {
@@ -379,6 +429,7 @@
                 });
             }
 
+
             document.addEventListener("fullscreenchange", () => {
                 if (!document.fullscreenElement) {
                     document.body.classList.remove("fullscreen-art");
@@ -386,6 +437,7 @@
                     updateFullscreenIcon();
                 }
             });
+
 
             /* ===========================
                SEARCH OVERLAY LOGIC
@@ -397,6 +449,7 @@
             const searchInputOverlay = document.getElementById("searchInputOverlay");
             const searchResults = document.getElementById("searchResults");
             const searchCloseBtn = document.getElementById("searchClose");
+
 
             function openSearchOverlay() {
                 if (!searchOverlay) return;
@@ -410,12 +463,14 @@
                 }
             }
 
+
             function closeSearchOverlay() {
                 if (!searchOverlay) return;
                 searchOverlay.classList.remove("open");
                 document.body.classList.remove("search-open");
                 searchOverlay.setAttribute("aria-hidden", "true");
             }
+
 
             if (navSearchInput) {
                 navSearchInput.addEventListener("click", openSearchOverlay);
@@ -428,6 +483,7 @@
                 searchOverlayBackdrop.addEventListener("click", closeSearchOverlay);
             }
 
+
             function highlightText(text, query) {
                 if (!query) return text;
                 const escaped = query.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
@@ -435,12 +491,15 @@
                 return text.replace(regex, (match) => `<span class="highlight">${match}</span>`);
             }
 
+
             function renderDefaultSearchResults() {
                 if (!searchResults) return;
                 searchResults.innerHTML = "";
 
+
                 const wrapper = document.createElement("div");
                 wrapper.className = "search-default-grid";
+
 
                 artData.slice(0, 6).forEach(art => {
                     const card = document.createElement("button");
@@ -463,8 +522,10 @@
                     wrapper.appendChild(card);
                 });
 
+
                 searchResults.appendChild(wrapper);
             }
+
 
             function renderSearchResults(query) {
                 if (!searchResults) return;
@@ -474,7 +535,9 @@
                     return;
                 }
 
+
                 searchResults.innerHTML = "";
+
 
                 const matches = artData.filter(art => {
                     return (
@@ -482,6 +545,7 @@
                         (art.description && art.description.toLowerCase().includes(q))
                     );
                 });
+
 
                 if (matches.length === 0) {
                     const empty = document.createElement("p");
@@ -491,12 +555,15 @@
                     return;
                 }
 
+
                 const list = document.createElement("div");
                 list.className = "search-results-list";
+
 
                 matches.forEach(art => {
                     const descText = art.description || "";
                     const snippet = descText;
+
 
                     const card = document.createElement("button");
                     card.className = "search-result search-result-art";
@@ -518,8 +585,10 @@
                     list.appendChild(card);
                 });
 
+
                 searchResults.appendChild(list);
             }
+
 
             if (searchInputOverlay) {
                 searchInputOverlay.addEventListener("input", (e) => {
@@ -527,15 +596,18 @@
                 });
             }
 
+
             // Prepare default search content on load
             if (searchOverlay && searchResults) {
                 renderDefaultSearchResults();
             }
 
+
             // Expose for potential cross-script use
             window.openArtViewerById = openArtViewerById;
         });
     </script>
+
 
 </body>
 </html>
