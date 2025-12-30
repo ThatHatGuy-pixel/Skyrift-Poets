@@ -1,468 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Harris — Portfolio</title>
-
-  <!-- REPLACE THIS: Change site name + description for school applications -->
-  <meta name="description" content="Art & Projects portfolio for school applications. Includes gallery, projects, skills, and contact." />
-
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Artist Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <!-- Skip link for accessibility -->
-  <a class="skip-link" href="#main">Skip to content</a>
 
-  <!-- Top Bar -->
-  <header class="topbar">
-    <div class="container topbar-inner">
-      <a class="brand" href="#home" aria-label="Go to home">
-        <!-- REPLACE THIS: Your name/brand -->
-        <span class="brand-mark">◆</span>
-        <span class="brand-name">Harris</span>
-        <span class="brand-sub">Art • 3D • Game Dev</span>
-      </a>
+    <!-- NAVIGATION -->
+    <header>
+        <nav>
+            <div class="logo">Harris Ross</div>
+            <ul>
+                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li><a href="index.html#work" class="nav-link">Portfolio</a></li>
+                <li><a href="blog.html" class="nav-link">Blog</a></li>
+                <li><a href="index.html#about" class="nav-link">About</a></li>
+                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-      <nav class="nav" aria-label="Primary navigation">
-        <a href="#about">About</a>
-        <a href="#gallery">Art</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
-      </nav>
-
-      <div class="topbar-actions">
-        <button class="btn ghost" id="themeToggle" type="button" aria-label="Toggle theme">
-          <span aria-hidden="true">☾</span>
-          <span class="btn-text">Theme</span>
-        </button>
-      </div>
-    </div>
-  </header>
-
-  <main id="main">
-    <!-- Hero -->
-    <section id="home" class="hero">
-      <div class="container hero-grid">
-        <div class="hero-left">
-          <p class="pill">
-            <!-- REPLACE THIS: short tagline -->
-            Applying for Year 10 • Portfolio Showcase
-          </p>
-
-          <h1>
-            <!-- REPLACE THIS: hero headline -->
-            I build worlds—through art, animation, and games.
-          </h1>
-
-          <p class="lead">
-            <!-- REPLACE THIS: 2–3 sentence intro -->
-            Hi, I’m Harris. I create digital art, 3D models, animations, and game prototypes.
-            This site highlights my best work for school applications and scholarships.
-          </p>
-
-          <div class="hero-cta">
-            <a class="btn" href="#projects">View Projects</a>
-            <a class="btn ghost" href="#gallery">View Art</a>
-          </div>
-
-          <div class="quick-stats" aria-label="Quick highlights">
-            <!-- REPLACE THIS: adjust numbers + labels -->
-            <div class="stat">
-              <div class="stat-num">12+</div>
-              <div class="stat-label">Finished artworks</div>
-            </div>
-            <div class="stat">
-              <div class="stat-num">5</div>
-              <div class="stat-label">Game prototypes</div>
-            </div>
-            <div class="stat">
-              <div class="stat-num">3</div>
-              <div class="stat-label">3D short scenes</div>
-            </div>
-          </div>
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Artist • Animator • Game Developer</h1>
+            <p>Creating immersive worlds through art, motion, and design.</p>
+            <a href="#work" class="btn">View My Work</a>
         </div>
-
-        <div class="hero-right">
-          <div class="hero-card">
-            <div class="hero-card-top">
-              <div class="badge">Featured Piece</div>
-              <div class="dots" aria-hidden="true">
-                <span></span><span></span><span></span>
-              </div>
-            </div>
-
-            <!-- REPLACE THIS IMAGE:
-                 Put a real image in /assets/featured.jpg (or change path).
-                 Recommended: 1400px wide JPG/PNG/WebP -->
-            <img class="hero-image" src="assets/featured-placeholder.jpg" alt="Featured artwork preview" />
-
-            <div class="hero-card-bottom">
-              <!-- REPLACE THIS: title + medium + year -->
-              <div>
-                <div class="card-title">“Sky Rift Concept”</div>
-                <div class="card-sub">Digital Painting • 2025</div>
-              </div>
-              <a class="mini-link" href="#gallery">See more →</a>
-            </div>
-          </div>
-
-          <div class="hero-note">
-            <!-- REPLACE THIS: short credibility note -->
-            <strong>Focus:</strong> character design, stylized 3D, animation acting, and game systems.
-          </div>
-        </div>
-      </div>
     </section>
 
-    <!-- About -->
-    <section id="about" class="section">
-      <div class="container two-col">
-        <div>
-          <h2>About Me</h2>
-          <p class="muted">
-            <!-- REPLACE THIS: about paragraph -->
-            I’m a student creator who loves storytelling, character performance, and building interactive experiences.
-            I’m especially interested in STEAM + Art pathways: game development, animation, and creative technology.
-          </p>
+    <!-- PORTFOLIO SECTION -->
+    <section id="work" class="portfolio">
+        <h2>Portfolio</h2>
 
-          <div class="info-grid">
-            <!-- REPLACE THESE: quick info cards -->
-            <div class="info-card">
-              <div class="info-title">What I’m proud of</div>
-              <div class="info-body">Consistent improvement, strong visual style, and ambitious long-term projects.</div>
-            </div>
-            <div class="info-card">
-              <div class="info-title">What I’m learning</div>
-              <div class="info-body">Rigging, shader basics, and cleaner code structure for Unity projects.</div>
-            </div>
-            <div class="info-card">
-              <div class="info-title">What I want next</div>
-              <div class="info-body">A school environment that supports both arts and advanced tech/STEAM.</div>
-            </div>
-          </div>
+        <div class="filter-buttons">
+            <button data-filter="all">All</button>
+            <button data-filter="paintings">Paintings</button>
+            <button data-filter="animation">Animation</button>
+            <button data-filter="sketches">Sketches</button>
+            <button data-filter="characters">Character Design</button>
+            <button data-filter="gamedev">Game Dev</button>
         </div>
 
-        <aside class="aside-card" aria-label="Resume highlights">
-          <h3>Resume Highlights</h3>
-
-          <!-- REPLACE THIS LIST -->
-          <ul class="clean-list">
-            <li><span class="dot"></span> 3D Animation & Rigging coursework (Maya)</li>
-            <li><span class="dot"></span> Unity prototypes: movement, combat, UI, collectibles</li>
-            <li><span class="dot"></span> Digital illustration + concept development</li>
-            <li><span class="dot"></span> Portfolio documentation + dev logs</li>
-          </ul>
-
-          <!-- Optional button: link to PDF resume -->
-          <!-- REPLACE THIS: put your resume PDF at assets/resume.pdf -->
-          <a class="btn ghost full" href="assets/resume-placeholder.pdf" target="_blank" rel="noopener">
-            View Resume PDF
-          </a>
-
-          <p class="tiny muted">
-            Tip: schools love evidence—show process images, iterations, and what you learned.
-          </p>
-        </aside>
-      </div>
+        <div class="gallery">
+            <!-- Replace the image URLs below with your own -->
+            <div class="item paintings"><img src="AIE/Ani 3.jpg" alt="Painting"></div>
+            <div class="item animation"><img src="images/animation1.gif" alt="Animation"></div>
+            <div class="item sketches"><img src="images/sketch1.jpg" alt="Sketch"></div>
+            <div class="item characters"><img src="images/character1.jpg" alt="Character Design"></div>
+            <div class="item gamedev"><img src="images/gamedev1.jpg" alt="Game Dev"></div>
+        </div>
     </section>
 
-    <!-- Gallery -->
-    <section id="gallery" class="section">
-      <div class="container">
-        <div class="section-head">
-          <div>
-            <h2>Art Gallery</h2>
-            <p class="muted">Click any piece to view it larger. Use the filters to show different types of work.</p>
-          </div>
-
-          <div class="filters" role="group" aria-label="Gallery filters">
-            <button class="chip is-active" data-filter="all" type="button">All</button>
-            <button class="chip" data-filter="2d" type="button">2D</button>
-            <button class="chip" data-filter="3d" type="button">3D</button>
-            <button class="chip" data-filter="animation" type="button">Animation</button>
-          </div>
-        </div>
-
-        <div class="grid gallery" id="galleryGrid" aria-label="Gallery items">
-          <!--
-            REPLACE THESE ITEMS:
-            - Put your images in /assets/
-            - Update data-tags to: 2d, 3d, animation
-            - Update title/medium/year
-          -->
-
-          <button class="tile" data-tags="2d" data-full="assets/art-placeholder-1.jpg" data-title="Character Concept Sheet" data-meta="Digital • 2025" type="button">
-            <img src="assets/art-placeholder-1.jpg" alt="Character concept sheet preview" />
-            <div class="tile-cap">
-              <div class="tile-title">Character Concept Sheet</div>
-              <div class="tile-meta">Digital • 2025</div>
-            </div>
-          </button>
-
-          <button class="tile" data-tags="3d" data-full="assets/art-placeholder-2.jpg" data-title="Stylized 3D Head Sculpt" data-meta="Maya/Blender • 2025" type="button">
-            <img src="assets/art-placeholder-2.jpg" alt="Stylized 3D head sculpt preview" />
-            <div class="tile-cap">
-              <div class="tile-title">Stylized 3D Head Sculpt</div>
-              <div class="tile-meta">Maya/Blender • 2025</div>
-            </div>
-          </button>
-
-          <button class="tile" data-tags="animation" data-full="assets/art-placeholder-3.jpg" data-title="Acting Shot Still" data-meta="Animation • 2025" type="button">
-            <img src="assets/art-placeholder-3.jpg" alt="Animation acting still preview" />
-            <div class="tile-cap">
-              <div class="tile-title">Acting Shot Still</div>
-              <div class="tile-meta">Animation • 2025</div>
-            </div>
-          </button>
-
-          <button class="tile" data-tags="2d" data-full="assets/art-placeholder-4.jpg" data-title="Environment Paintover" data-meta="Digital • 2024" type="button">
-            <img src="assets/art-placeholder-4.jpg" alt="Environment paintover preview" />
-            <div class="tile-cap">
-              <div class="tile-title">Environment Paintover</div>
-              <div class="tile-meta">Digital • 2024</div>
-            </div>
-          </button>
-        </div>
-      </div>
-    </section>
-
-    <!-- Projects -->
-    <section id="projects" class="section">
-      <div class="container">
-        <div class="section-head">
-          <div>
-            <h2>Projects</h2>
-            <p class="muted">Short, clear descriptions that a school can understand fast.</p>
-          </div>
-        </div>
-
-        <div class="grid projects">
-          <!-- PROJECT CARD TEMPLATE -->
-          <article class="card">
-            <!-- REPLACE THIS: project thumbnail -->
-            <img class="card-img" src="assets/project-placeholder-1.jpg" alt="Project thumbnail" />
-
-            <div class="card-body">
-              <!-- REPLACE THIS: project name -->
-              <h3 class="card-h">Skyrift (Game Prototype)</h3>
-
-              <!-- REPLACE THIS: 1–2 sentence summary + what you did -->
-              <p class="muted">
-                A Skylanders-inspired 3D action game prototype. I’m designing characters, building systems, and documenting progress.
-              </p>
-
-              <div class="tag-row" aria-label="Project tags">
-                <!-- REPLACE THIS: tags -->
-                <span class="tag">Unity</span>
-                <span class="tag">3D</span>
-                <span class="tag">Systems</span>
-              </div>
-
-              <div class="card-actions">
-                <!-- REPLACE THIS: link to devlog, video, or GitHub -->
-                <a class="btn small" href="#" target="_blank" rel="noopener">Project Link</a>
-                <button class="btn ghost small" type="button"
-                  data-modal-title="Skyrift (Game Prototype)"
-                  data-modal-body="REPLACE THIS: Add 3–6 bullet points about what you learned, what you built, and what’s next.&#10;&#10;Example:&#10;• Implemented player movement + camera&#10;• Basic enemy AI prototype&#10;• UI: health + currency&#10;• Next: portal/collectibles system">
-                  Details
-                </button>
-              </div>
-            </div>
-          </article>
-
-          <article class="card">
-            <img class="card-img" src="assets/project-placeholder-2.jpg" alt="Project thumbnail" />
-            <div class="card-body">
-              <h3 class="card-h">3D Rig + Acting Test</h3>
-              <p class="muted">
-                A character rigging and acting performance test focusing on clear poses, facial expression, and timing.
-              </p>
-              <div class="tag-row">
-                <span class="tag">Maya</span>
-                <span class="tag">Rigging</span>
-                <span class="tag">Animation</span>
-              </div>
-              <div class="card-actions">
-                <a class="btn small" href="#" target="_blank" rel="noopener">Video Link</a>
-                <button class="btn ghost small" type="button"
-                  data-modal-title="3D Rig + Acting Test"
-                  data-modal-body="REPLACE THIS: Describe your workflow. Mention references, blocking → spline, polish, and feedback loops.">
-                  Details
-                </button>
-              </div>
-            </div>
-          </article>
-
-          <article class="card">
-            <img class="card-img" src="assets/project-placeholder-3.jpg" alt="Project thumbnail" />
-            <div class="card-body">
-              <h3 class="card-h">Art + Dev Documentation Site</h3>
-              <p class="muted">
-                A clean portfolio + devlog site to track progress, show best work, and present it professionally to schools.
-              </p>
-              <div class="tag-row">
-                <span class="tag">HTML/CSS</span>
-                <span class="tag">Design</span>
-                <span class="tag">Writing</span>
-              </div>
-              <div class="card-actions">
-                <a class="btn small" href="#" target="_blank" rel="noopener">Website Link</a>
-                <button class="btn ghost small" type="button"
-                  data-modal-title="Art + Dev Documentation Site"
-                  data-modal-body="REPLACE THIS: Mention what you improved: layout, accessibility, image compression, structure, clarity for reviewers.">
-                  Details
-                </button>
-              </div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Skills -->
-    <section id="skills" class="section">
-      <div class="container two-col">
-        <div>
-          <h2>Skills & Tools</h2>
-          <p class="muted">
-            Keep this honest and specific. Schools prefer “what you can do” over buzzwords.
-          </p>
-
-          <div class="skill-bars" aria-label="Skill list">
-            <!-- REPLACE THESE: adjust labels + percentages -->
-            <div class="skill">
-              <div class="skill-top">
-                <span>Digital Art / Concept</span><span class="muted">Advanced</span>
-              </div>
-              <div class="bar"><span style="width: 85%"></span></div>
-            </div>
-
-            <div class="skill">
-              <div class="skill-top">
-                <span>3D Modeling</span><span class="muted">Intermediate</span>
-              </div>
-              <div class="bar"><span style="width: 65%"></span></div>
-            </div>
-
-            <div class="skill">
-              <div class="skill-top">
-                <span>Animation (Acting)</span><span class="muted">Intermediate</span>
-              </div>
-              <div class="bar"><span style="width: 60%"></span></div>
-            </div>
-
-            <div class="skill">
-              <div class="skill-top">
-                <span>Unity / C#</span><span class="muted">Developing</span>
-              </div>
-              <div class="bar"><span style="width: 45%"></span></div>
-            </div>
-          </div>
-        </div>
-
-        <aside class="aside-card">
-          <h3>Tools</h3>
-          <!-- REPLACE THIS: tools you actually use -->
-          <div class="tool-list">
-            <span class="tag">Maya</span>
-            <span class="tag">Blender</span>
-            <span class="tag">Unity</span>
-            <span class="tag">Clip Studio</span>
-            <span class="tag">Photoshop (if used)</span>
-            <span class="tag">GitHub</span>
-          </div>
-
-          <div class="divider"></div>
-
-          <h3>Achievements / Evidence</h3>
-          <!-- REPLACE THIS -->
-          <ul class="clean-list">
-            <li><span class="dot"></span> Portfolio projects with process breakdowns</li>
-            <li><span class="dot"></span> Coursework deliverables (shots, rigs, scenes)</li>
-            <li><span class="dot"></span> Consistent dev log updates</li>
-          </ul>
-        </aside>
-      </div>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact" class="section">
-      <div class="container contact">
-        <div>
-          <h2>Contact</h2>
-          <p class="muted">
-            For school applications: keep contact simple and professional.
-          </p>
-
-          <!-- REPLACE THIS: Use a safe email you control -->
-          <div class="contact-cards">
-            <a class="contact-card" href="mailto:your.email@example.com">
-              <div class="contact-ico" aria-hidden="true">✉</div>
-              <div>
-                <div class="contact-title">Email</div>
-                <div class="contact-sub">your.email@example.com</div>
-              </div>
-            </a>
-
-            <!-- REPLACE THIS: optional links -->
-            <a class="contact-card" href="#" target="_blank" rel="noopener">
-              <div class="contact-ico" aria-hidden="true">↗</div>
-              <div>
-                <div class="contact-title">Portfolio Drive / Reel</div>
-                <div class="contact-sub">Link to video / folder</div>
-              </div>
-            </a>
-          </div>
-        </div>
-
-        <div class="aside-card">
-          <h3>What schools like to see</h3>
-          <ul class="clean-list">
-            <li><span class="dot"></span> Best work first (curated)</li>
-            <li><span class="dot"></span> Process: sketches → iterations → final</li>
-            <li><span class="dot"></span> Reflection: what you learned / improved</li>
-            <li><span class="dot"></span> Clear labeling: medium, date, role</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="container footer-inner">
-      <!-- REPLACE THIS: year + name -->
-      <p class="muted">© <span id="year"></span> Harris — Portfolio</p>
-      <p class="muted tiny">Built with clean HTML/CSS/JS. No trackers.</p>
-    </div>
-  </footer>
-
-  <!-- Image/Details Modal -->
-  <div class="modal" id="modal" aria-hidden="true">
-    <div class="modal-backdrop" data-close></div>
-    <div class="modal-panel" role="dialog" aria-modal="true" aria-label="Preview">
-      <div class="modal-head">
-        <div>
-          <div class="modal-title" id="modalTitle">Title</div>
-          <div class="modal-meta muted" id="modalMeta">Meta</div>
-        </div>
-        <button class="icon-btn" type="button" data-close aria-label="Close modal">✕</button>
-      </div>
-
-      <div class="modal-content" id="modalContent">
-        <!-- JS injects image or text here -->
-      </div>
-
-      <div class="modal-foot">
-        <p class="tiny muted" id="modalNote">
-          Tip: Add process images and explain your role clearly (modeling, rigging, coding, etc.).
+    <!-- ABOUT SECTION -->
+    <section id="about" class="about">
+        <h2>About Me</h2>
+        <p>
+            I am a multidisciplinary artist specializing in animation, fine art, and game development. 
+            I love crafting visual stories, designing worlds, and bringing characters to life through illustration and motion. 
+            My work combines emotion, imagination, and technical skill to create memorable experiences.
         </p>
-      </div>
-    </div>
-  </div>
+    </section>
 
-  <script src="script.js"></script>
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="contact">
+        <h2>Contact</h2>
+        <p>Email: <strong>youremail@example.com</strong></p>
+        <p>Instagram: <strong>@yourhandle</strong></p>
+        <p>ArtStation / Portfolio Links</p>
+    </section>
+
+    <footer>
+        © 2025 Your Name — All Rights Reserved
+    </footer>
+
+    <script>
+        // Simple filter script
+        const buttons = document.querySelectorAll(".filter-buttons button");
+        const items = document.querySelectorAll(".gallery .item");
+
+        buttons.forEach(btn => {
+            btn.addEventListener("click", () => {
+                const filter = btn.dataset.filter;
+
+                items.forEach(item => {
+                    if (filter === "all" || item.classList.contains(filter)) {
+                        item.style.display = "block";
+                    } else {
+                        item.style.display = "none";
+                    }
+                });
+            });
+        });
+    </script>
+
 </body>
 </html>
+
+
